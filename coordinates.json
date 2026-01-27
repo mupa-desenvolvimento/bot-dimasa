@@ -1,0 +1,127 @@
+{
+    "setup_steps": [
+        {
+            "action": "click",
+            "description": "Botão Faturamento no menu superior",
+            "x": 110,
+            "y": 35,
+            "wait_before": 35000,
+            "wait_after": 1000
+        },
+        {
+            "action": "click",
+            "description": "Opção Entrada no menu suspenso",
+            "x": 135,
+            "y": 66,
+            "wait_after": 1000
+        },
+        {
+            "action": "click",
+            "description": "Opção Fila de Notas de Entrada no submenu",
+            "x": 350,
+            "y": 66,
+            "wait_after": 5000
+        },
+        {
+            "action": "click",
+            "description": "Clique 4 Botão em Trânsito",
+            "x": 610,
+            "y": 400,
+            "wait_after": 1000
+        },
+        {
+            "action": "click",
+            "description": "Clique 5 (Visualizar a lista de Notas de Entrada)",
+            "x": 655,
+            "y": 368,
+            "wait_after": 5000
+        }
+    ],
+    "invoice_loop_steps": [
+        { 
+            "description": "[{{nf}}] Focus Search Field", 
+            "action": "click", 
+            "x": 230, 
+            "y": 285, 
+            "wait_after": 500 
+        },
+        { 
+            "description": "[{{nf}}] Clear Field", 
+            "action": "keypress", 
+            "key": "SelectAll_Delete", 
+            "wait_after": 200 
+        },
+        { 
+            "description": "[{{nf}}] Type NF Number", 
+            "action": "type", 
+            "text": "{{nf}}", 
+            "wait_after": 1000 
+        },
+        { 
+            "description": "[{{nf}}] Press Enter", 
+            "action": "keypress", 
+            "key": "Enter", 
+            "wait_after": 3000 
+        },
+        { 
+            "description": "[{{nf}}] Open Invoice", 
+            "action": "double_click", 
+            "x": 600, 
+            "y": 350, 
+            "wait_after": 5000 
+        },
+        { 
+            "description": "[{{nf}}] Validate Screen", 
+            "action": "wait_for_text", 
+            "text": "Nota Fiscal", 
+            "timeout": 10000 
+        },
+        { 
+            "description": "[{{nf}}] Extract Access Key", 
+            "action": "ocr_region", 
+            "x": 600, 
+            "y": 120, 
+            "width": 300, 
+            "height": 30, 
+            "psm": "7", 
+            "save_key": "access_key" 
+        },
+        { 
+            "description": "[{{nf}}] Click Items Tab", 
+            "action": "click", 
+            "x": 100, 
+            "y": 300, 
+            "wait_after": 2000 
+        },
+        { 
+            "description": "[{{nf}}] Extract Items", 
+            "action": "extract_table_items", 
+            "save_key": "items" 
+        },
+        { 
+            "description": "[{{nf}}] Save Data", 
+            "action": "save_json", 
+            "nf": "{{nf}}" 
+        },
+        { 
+            "description": "[{{nf}}] Close Window", 
+            "action": "click", 
+            "x": 900, 
+            "y": 50, 
+            "wait_after": 1000 
+        },
+        { 
+            "description": "[{{nf}}] Handle Unsaved Warning", 
+            "action": "conditional_click", 
+            "check_text": "Deseja salvar", 
+            "click_text": "Não", 
+            "wait_after": 1000 
+        },
+        { 
+            "description": "[{{nf}}] Return to List", 
+            "action": "wait_for_text", 
+            "text": "Fila de Notas", 
+            "timeout": 5000 
+        }
+    ]
+}

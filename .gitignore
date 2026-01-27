@@ -1,0 +1,11 @@
+node_modules/
+.env
+debug_*.png
+debug_*.txt
+*.log
+prints/
+output/
+.DS_Store
+Thumbs.db
+por.traineddata
+recordings/

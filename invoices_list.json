@@ -1,0 +1,20 @@
+{
+  "total": 3,
+  "notas": [
+    {
+      "number": "203181728",
+      "error": "Details screen did not load after multiple attempts.",
+      "status": "failed"
+    },
+    {
+      "number": "181728",
+      "error": "Details screen did not load after multiple attempts.",
+      "status": "failed"
+    },
+    {
+      "number": "375628",
+      "error": "Details screen did not load after multiple attempts.",
+      "status": "failed"
+    }
+  ]
+}

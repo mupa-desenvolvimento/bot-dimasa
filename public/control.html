@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans h-screen flex flex-col">
+    <div id="app" class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header class="bg-gray-800 shadow-md p-4 flex justify-between items-center border-b border-gray-700">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-robot text-blue-500 text-2xl"></i>
+                <div>
+                    <h1 class="text-xl font-bold">Bot Controller</h1>
+                    <p class="text-xs text-gray-400">Dimasa Automation v1.0</p>
+                </div>
+            </div>
+            <div>
+                <a href="/" class="text-gray-400 hover:text-white transition text-sm flex items-center">
+                    <i class="fas fa-cog mr-1"></i> Settings / Action Manager
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex items-center justify-center p-6">
+            <div class="w-full max-w-md bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
+                
+                <!-- Status Display -->
+                <div class="p-8 text-center border-b border-gray-700 relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10" :class="botRunning ? 'bg-green-500' : 'bg-red-500'"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-4 transition-all duration-500 border-4"
+                             :class="botRunning ? 'border-green-500 shadow-[0_0_30px_rgba(34,197,94,0.5)]' : 'border-red-500 bg-gray-700'">
+                            <i class="fas text-4xl" :class="botRunning ? 'fa-sync fa-spin text-green-500' : 'fa-power-off text-red-500'"></i>
+                        </div>
+                        
+                        <h2 class="text-2xl font-bold mb-1" :class="botRunning ? 'text-green-400' : 'text-red-400'">
+                            {{ botRunning ? 'BOT IS RUNNING' : 'BOT STOPPED' }}
+                        </h2>
+                        <p class="text-gray-400 text-sm">
+                            {{ botRunning ? 'Automation sequence in progress...' : 'Ready to start automation sequence.' }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="p-8 space-y-4">
+                    <button @click="startBot" :disabled="botRunning"
+                            class="w-full py-4 rounded-xl font-bold text-lg shadow-lg transform transition active:scale-95 flex items-center justify-center space-x-2"
+                            :class="botRunning ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-green-600 hover:bg-green-500 text-white shadow-green-900/50'">
+                        <i class="fas fa-play"></i>
+                        <span>START AUTOMATION</span>
+                    </button>
+
+                    <button @click="stopBot" :disabled="!botRunning"
+                            class="w-full py-4 rounded-xl font-bold text-lg shadow-lg transform transition active:scale-95 flex items-center justify-center space-x-2"
+                            :class="!botRunning ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-red-600 hover:bg-red-500 text-white shadow-red-900/50'">
+                        <i class="fas fa-stop"></i>
+                        <span>STOP PROCESS</span>
+                    </button>
+
+                    <button @click="restartBot" :disabled="!botRunning"
+                            class="w-full py-4 rounded-xl font-bold text-lg shadow-lg transform transition active:scale-95 flex items-center justify-center space-x-2"
+                            :class="!botRunning ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-900/50'">
+                        <i class="fas fa-sync"></i>
+                        <span>RESTART PROCESS</span>
+                    </button>
+                </div>
+
+                <!-- Stats / Info -->
+                <div class="bg-gray-900 p-4 text-xs text-gray-500 flex justify-between border-t border-gray-700">
+                    <span>Server Status: Online</span>
+                    <span>Port: 3000</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    botRunning: false,
+                    statusInterval: null
+                }
+            },
+            mounted() {
+                this.checkBotStatus();
+                this.statusInterval = setInterval(this.checkBotStatus, 1000); // Faster check for control panel
+            },
+            beforeUnmount() {
+                if (this.statusInterval) clearInterval(this.statusInterval);
+            },
+            methods: {
+                async checkBotStatus() {
+                    try {
+                        const res = await fetch('/api/bot/status');
+                        const data = await res.json();
+                        this.botRunning = data.running;
+                    } catch (e) {
+                        console.error('Status check failed', e);
+                    }
+                },
+                async startBot() {
+                    try {
+                        const res = await fetch('/api/bot/start', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = true;
+                        } else {
+                            alert('Failed to start: ' + data.error);
+                        }
+                    } catch (e) {
+                        alert('Error starting bot');
+                    }
+                },
+                async stopBot() {
+                    if (!confirm('Confirm STOP? This will kill the process.')) return;
+                    try {
+                        const res = await fetch('/api/bot/stop', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = false;
+                        }
+                    } catch (e) {
+                        alert('Error stopping bot');
+                    }
+                },
+                async restartBot() {
+                    if (!confirm('Confirm RESTART? This will kill and restart the process.')) return;
+                    try {
+                        const res = await fetch('/api/bot/restart', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = true;
+                        }
+                    } catch (e) {
+                        alert('Error restarting bot');
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

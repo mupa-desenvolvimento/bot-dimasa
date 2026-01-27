@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Action Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="app" class="container mx-auto p-6 max-w-5xl">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-blue-600">Bot Action Manager</h1>
+                <p class="text-gray-500">Manage your automation steps (coordinates.json)</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Bot Controls -->
+                <div class="flex items-center space-x-2 mr-2">
+                    <button @click="startBot" :disabled="botRunning" 
+                            class="w-10 h-10 rounded-full flex items-center justify-center transition shadow"
+                            :class="botRunning ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-green-500 hover:bg-green-600 text-white'"
+                            title="Start Bot">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button @click="stopBot" :disabled="!botRunning"
+                            class="w-10 h-10 rounded-full flex items-center justify-center transition shadow"
+                            :class="!botRunning ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-red-500 hover:bg-red-600 text-white'"
+                            title="Stop Bot">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                    <button @click="restartBot" 
+                            class="w-10 h-10 rounded-full flex items-center justify-center transition shadow bg-blue-500 hover:bg-blue-600 text-white"
+                            title="Restart Bot">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                </div>
+
+                <!-- Bot Controls Link -->
+                <a href="/control.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded shadow transition font-bold flex items-center text-sm">
+                    <i class="fas fa-gamepad mr-2"></i> Panel
+                </a>
+
+                <div class="space-x-2">
+                    <button @click="fetchActions" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded shadow transition">
+                        <i class="fas fa-sync-alt mr-2"></i> Reload
+                    </button>
+                    <button @click="saveActions" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded shadow transition font-bold">
+                        <i class="fas fa-save mr-2"></i> Save Changes
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- List Column -->
+            <div class="lg:col-span-2 space-y-4">
+                <div v-for="(action, index) in actions" :key="index" 
+                     class="bg-white p-4 rounded-lg shadow border-l-4 transition hover:shadow-md cursor-pointer relative group"
+                     :class="getActionColorClass(action.action)"
+                     @click="selectAction(index)">
+                    
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded text-white" :class="getActionBadgeClass(action.action)">
+                                    {{ action.action }}
+                                </span>
+                                <span class="text-xs text-gray-400 font-mono">#{{ index + 1 }}</span>
+                            </div>
+                            <h3 class="font-semibold text-lg leading-tight">{{ action.description || 'No description' }}</h3>
+                            
+                            <div class="mt-2 text-sm text-gray-500 font-mono space-x-3">
+                                <span v-if="action.x !== undefined">x:{{ action.x }}</span>
+                                <span v-if="action.y !== undefined">y:{{ action.y }}</span>
+                                <span v-if="action.wait_after">wait:{{ action.wait_after }}ms</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons (Visible on Hover) -->
+                        <div class="opacity-0 group-hover:opacity-100 transition flex space-x-1">
+                            <button @click.stop="moveUp(index)" class="p-1.5 text-gray-400 hover:text-blue-500" title="Move Up">
+                                <i class="fas fa-arrow-up"></i>
+                            </button>
+                            <button @click.stop="moveDown(index)" class="p-1.5 text-gray-400 hover:text-blue-500" title="Move Down">
+                                <i class="fas fa-arrow-down"></i>
+                            </button>
+                            <button @click.stop="duplicateAction(index)" class="p-1.5 text-gray-400 hover:text-green-500" title="Duplicate">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button @click.stop="deleteAction(index)" class="p-1.5 text-gray-400 hover:text-red-500" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button @click="addNewAction" class="w-full py-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition flex items-center justify-center font-semibold">
+                    <i class="fas fa-plus mr-2"></i> Add New Action
+                </button>
+            </div>
+
+            <!-- Editor Column -->
+            <div class="lg:col-span-1">
+                <div class="bg-white p-6 rounded-lg shadow sticky top-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-2">
+                        {{ selectedIndex === -1 ? 'New Action' : 'Edit Action #' + (selectedIndex + 1) }}
+                    </h2>
+
+                    <div v-if="currentAction" class="space-y-4">
+                        
+                        <!-- Action Type -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Action Type</label>
+                            <select v-model="currentAction.action" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                                <option value="click">Click</option>
+                                <option value="double_click">Double Click</option>
+                                <option value="drag">Drag (Mouse)</option>
+                                <option value="scroll">Scroll</option>
+                                <option value="screenshot_region">Screenshot Region</option>
+                                <option value="ocr_region">OCR Region</option>
+                                <option value="consolidate_ocr_list">Consolidate OCR List</option>
+                                <option value="extract_invoices">Extract Invoices</option>
+                                <option value="find_text">Find Text</option>
+                            </select>
+                        </div>
+
+                        <!-- Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                            <input type="text" v-model="currentAction.description" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border">
+                        </div>
+
+                        <!-- Coordinates Group -->
+                        <div class="grid grid-cols-2 gap-2" v-if="['click', 'double_click', 'scroll', 'screenshot_region', 'ocr_region'].includes(currentAction.action)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">X</label>
+                                <input type="number" v-model.number="currentAction.x" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Y</label>
+                                <input type="number" v-model.number="currentAction.y" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                        </div>
+
+                         <!-- Dimensions Group -->
+                         <div class="grid grid-cols-2 gap-2" v-if="['screenshot_region', 'ocr_region'].includes(currentAction.action)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Width</label>
+                                <input type="number" v-model.number="currentAction.width" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Height</label>
+                                <input type="number" v-model.number="currentAction.height" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                        </div>
+
+                        <!-- Drag Specific -->
+                        <div v-if="currentAction.action === 'drag'" class="space-y-2 bg-gray-50 p-3 rounded border">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div><label class="text-xs">Start X</label><input type="number" v-model.number="currentAction.startX" class="w-full border p-1 rounded"></div>
+                                <div><label class="text-xs">Start Y</label><input type="number" v-model.number="currentAction.startY" class="w-full border p-1 rounded"></div>
+                                <div><label class="text-xs">End X</label><input type="number" v-model.number="currentAction.endX" class="w-full border p-1 rounded"></div>
+                                <div><label class="text-xs">End Y</label><input type="number" v-model.number="currentAction.endY" class="w-full border p-1 rounded"></div>
+                            </div>
+                        </div>
+
+                        <!-- Scroll Specific -->
+                         <div v-if="currentAction.action === 'scroll'">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Delta Y (Scroll Amount)</label>
+                            <input type="number" v-model.number="currentAction.deltaY" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                        </div>
+
+                        <!-- Extra Params -->
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Wait Before (ms)</label>
+                                <input type="number" v-model.number="currentAction.wait_before" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Wait After (ms)</label>
+                                <input type="number" v-model.number="currentAction.wait_after" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                            </div>
+                        </div>
+
+                        <div v-if="currentAction.action === 'screenshot_region'">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Filename</label>
+                            <input type="text" v-model="currentAction.filename" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                        </div>
+
+                        <div v-if="currentAction.action === 'ocr_region'">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">PSM Mode</label>
+                            <select v-model="currentAction.psm" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                                <option value="3">3 - Auto</option>
+                                <option value="6">6 - Block</option>
+                                <option value="4">4 - Column</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div v-else class="text-center py-10 text-gray-400">
+                        <i class="fas fa-mouse-pointer text-4xl mb-3"></i>
+                        <p>Select an action to edit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    actions: [],
+                    selectedIndex: -1,
+                    currentAction: null, // Copy of selected or new
+                    botRunning: false,
+                    statusInterval: null
+                }
+            },
+            mounted() {
+                this.fetchActions();
+                this.checkBotStatus();
+                this.statusInterval = setInterval(this.checkBotStatus, 2000);
+            },
+            beforeUnmount() {
+                if (this.statusInterval) clearInterval(this.statusInterval);
+            },
+            watch: {
+                // Sync currentAction back to actions array when modified
+                currentAction: {
+                    handler(newVal) {
+                        if (this.selectedIndex !== -1 && newVal) {
+                            this.actions[this.selectedIndex] = newVal;
+                        }
+                    },
+                    deep: true
+                }
+            },
+            methods: {
+                async fetchActions() {
+                    try {
+                        const res = await fetch('/api/actions');
+                        this.actions = await res.json();
+                        if (this.actions.length > 0) {
+                            this.selectAction(0);
+                        }
+                    } catch (e) {
+                        alert('Error loading actions');
+                    }
+                },
+                async saveActions() {
+                    try {
+                        const res = await fetch('/api/actions', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.actions)
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            alert('Saved successfully!');
+                        }
+                    } catch (e) {
+                        alert('Error saving');
+                    }
+                },
+                selectAction(index) {
+                    this.selectedIndex = index;
+                    this.currentAction = { ...this.actions[index] }; // Clone
+                },
+                addNewAction() {
+                    const newAction = {
+                        action: 'click',
+                        description: 'New Action',
+                        x: 0,
+                        y: 0,
+                        wait_after: 1000
+                    };
+                    this.actions.push(newAction);
+                    this.selectAction(this.actions.length - 1);
+                },
+                deleteAction(index) {
+                    if (confirm('Are you sure?')) {
+                        this.actions.splice(index, 1);
+                        if (this.actions.length === 0) {
+                            this.selectedIndex = -1;
+                            this.currentAction = null;
+                        } else {
+                            this.selectAction(Math.max(0, index - 1));
+                        }
+                    }
+                },
+                duplicateAction(index) {
+                    const clone = JSON.parse(JSON.stringify(this.actions[index]));
+                    clone.description += ' (Copy)';
+                    this.actions.splice(index + 1, 0, clone);
+                },
+                moveUp(index) {
+                    if (index > 0) {
+                        const temp = this.actions[index];
+                        this.actions[index] = this.actions[index - 1];
+                        this.actions[index - 1] = temp;
+                        this.selectAction(index - 1);
+                    }
+                },
+                moveDown(index) {
+                    if (index < this.actions.length - 1) {
+                        const temp = this.actions[index];
+                        this.actions[index] = this.actions[index + 1];
+                        this.actions[index + 1] = temp;
+                        this.selectAction(index + 1);
+                    }
+                },
+                getActionColorClass(type) {
+                    switch(type) {
+                        case 'click': return 'border-blue-500';
+                        case 'double_click': return 'border-blue-700';
+                        case 'drag': return 'border-purple-500';
+                        case 'scroll': return 'border-purple-300';
+                        case 'screenshot_region': return 'border-green-500';
+                        case 'ocr_region': return 'border-orange-500';
+                        default: return 'border-gray-400';
+                    }
+                },
+                getActionBadgeClass(type) {
+                    switch(type) {
+                        case 'click': return 'bg-blue-500';
+                        case 'double_click': return 'bg-blue-700';
+                        case 'drag': return 'bg-purple-500';
+                        case 'scroll': return 'bg-purple-300 text-gray-800';
+                        case 'screenshot_region': return 'bg-green-500';
+                        case 'ocr_region': return 'bg-orange-500';
+                        default: return 'bg-gray-500';
+                    }
+                },
+                async checkBotStatus() {
+                    try {
+                        const res = await fetch('/api/bot/status');
+                        const data = await res.json();
+                        this.botRunning = data.running;
+                    } catch (e) {
+                        console.error('Status check failed', e);
+                    }
+                },
+                async startBot() {
+                    try {
+                        const res = await fetch('/api/bot/start', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = true;
+                            // alert('Bot started!'); // Less intrusive
+                        } else {
+                            alert('Failed to start: ' + data.error);
+                        }
+                    } catch (e) {
+                        alert('Error starting bot');
+                    }
+                },
+                async stopBot() {
+                    if (!confirm('Are you sure you want to stop the bot?')) return;
+                    try {
+                        const res = await fetch('/api/bot/stop', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = false;
+                        }
+                    } catch (e) {
+                        alert('Error stopping bot');
+                    }
+                },
+                async restartBot() {
+                    if (!confirm('Are you sure you want to RESTART the bot?')) return;
+                    try {
+                        const res = await fetch('/api/bot/restart', { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.botRunning = true;
+                        }
+                    } catch (e) {
+                        alert('Error restarting bot');
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
