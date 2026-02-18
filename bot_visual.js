@@ -28,7 +28,7 @@ const CONFIG = {
     url_inicial: 'https://workspace.sisand.com.br/login',
     credentials: {
         user: '089.jeanp',
-        pass: 'Dimasa1379@'
+        pass: 'Ja152016@'
     },
 };
 
@@ -746,40 +746,10 @@ class VisionBot {
         await this.worker.setParameters({
             tessedit_pageseg_mode: psm,
         });
-        await this.page.evaluate(() => {
-            const ids = ['bot-overlay', 'bot-highlight-box', 'bot-drag-container'];
-            window.__botPrevDisplayText = {};
-            ids.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    window.__botPrevDisplayText[id] = el.style.display;
-                    el.style.display = 'none';
-                }
-            });
-        });
-        await this.delay(30);
-        try {
-            const screenshotBuffer = await this.page.screenshot({ clip: region });
-            const { data } = await this.worker.recognize(screenshotBuffer);
-            return data.text.toLowerCase();
-        } finally {
-            await this.page.evaluate(() => {
-                const ids = ['bot-overlay', 'bot-highlight-box', 'bot-drag-container'];
-                if (window.__botPrevDisplayText) {
-                    ids.forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) {
-                            el.style.display = window.__botPrevDisplayText[id] ?? '';
-                        }
-                    });
-                } else {
-                    ids.forEach(id => {
-                        const el = document.getElementById(id);
-                        if (el) el.style.display = '';
-                    });
-                }
-            });
-        }
+
+        const screenshotBuffer = await this.page.screenshot({ clip: region });
+        const { data } = await this.worker.recognize(screenshotBuffer);
+        return data.text.toLowerCase();
     }
 
     async waitForDetailsScreen(maxRetries = 5) {
@@ -1283,21 +1253,23 @@ class VisionBot {
 
                 let qtyIndex = -1;
                 for (let idx = tokens.length - 1; idx >= 1; idx--) {
-                    const t = tokens[idx].replace(/[^\d]/g, '');
-                    if (t) {
+                    const t = tokens[idx].replace(/\s/g, '');
+                    if (/^\d+$/.test(t)) {
                         qtyIndex = idx;
                         break;
                     }
                 }
                 if (qtyIndex === -1) continue;
 
-                quantidade = tokens[qtyIndex].replace(/[^\d]/g, '');
+                quantidade = tokens[qtyIndex];
                 codFabricante = tokens[0];
-                const locIndex = qtyIndex - 1;
-                if (locIndex <= 1) continue;
-                localizacao = tokens[locIndex];
-                const descTokens = tokens.slice(1, locIndex);
+
+                const locStart = Math.max(1, qtyIndex - 3);
+                const locationTokens = tokens.slice(locStart, qtyIndex);
+                const descTokens = tokens.slice(1, locStart);
+
                 produto = descTokens.join(' ');
+                localizacao = locationTokens.join(' ');
             }
 
             if (!codFabricante || !produto || !localizacao || !quantidade) continue;
@@ -1391,6 +1363,52 @@ class VisionBot {
             }
         } catch (e) {}
     }
+    async detectarColunasPorCabecalho(baseRegion) {
+        const band = { x: baseRegion.x, y: baseRegion.y, width: baseRegion.width, height: Math.min(80, baseRegion.height) };
+        const words = await this.getWordsInRegion(band, '6');
+        const tokens = words.map(w => ({ x: (w.bbox.x0 + w.bbox.x1) / 2, t: (w.text || '').toLowerCase() }));
+        const near = (a, b) => Math.abs(a - b) < 150;
+        const has = (s, arr) => arr.some(rx => rx.test(s));
+        let cods = tokens.filter(v => has(v.t, [/^cod\b/, /^cód\b/, /^cod\./, /fabricante/]));
+        let produtos = tokens.filter(v => has(v.t, [/produto/]));
+        let locais = tokens.filter(v => has(v.t, [/localiza/]));
+        let qtds = tokens.filter(v => has(v.t, [/^qtd\b/, /^qtde\b/, /^quant/i]));
+        let codX = null;
+        for (const c of cods) {
+            if (/fabricante/.test(c.t)) continue;
+            const parceiro = cods.find(o => /fabricante/.test(o.t) && near(o.x, c.x + 100));
+            if (parceiro) {
+                codX = Math.min(c.x, parceiro.x);
+                break;
+            }
+        }
+        if (codX === null && cods.length) codX = Math.min(...cods.map(v => v.x));
+        const prodX = produtos.length ? Math.min(...produtos.map(v => v.x)) : null;
+        const locX = locais.length ? Math.min(...locais.map(v => v.x)) : null;
+        const qtdX = qtds.length ? Math.min(...qtds.map(v => v.x)) : null;
+        const cols = [];
+        if (codX !== null) cols.push({ key: 'cod', x: codX });
+        if (prodX !== null) cols.push({ key: 'produto', x: prodX });
+        if (locX !== null) cols.push({ key: 'localizacao', x: locX });
+        if (qtdX !== null) cols.push({ key: 'qtd', x: qtdX });
+        if (cols.length < 2) return null;
+        cols.sort((a, b) => a.x - b.x);
+        const mids = [];
+        for (let i = 0; i < cols.length - 1; i++) {
+            mids.push(Math.round((cols[i].x + cols[i + 1].x) / 2));
+        }
+        const start = baseRegion.x;
+        const end = baseRegion.x + baseRegion.width;
+        const ranges = {};
+        for (let i = 0; i < cols.length; i++) {
+            const c = cols[i];
+            const left = i === 0 ? start : mids[i - 1];
+            const right = i === cols.length - 1 ? end : mids[i];
+            ranges[c.key] = { x: left - baseRegion.x, width: Math.max(10, right - left) };
+        }
+        if (!ranges.cod || !ranges.produto || !ranges.localizacao || !ranges.qtd) return ranges;
+        return ranges;
+    }
     async extrairItensTabela(context = {}, regionOverride = null) {
         const baseRegion = regionOverride && typeof regionOverride.x === 'number'
             ? {
@@ -1407,6 +1425,16 @@ class VisionBot {
                     height: context.lastPrintRegion.height || 676
                 }
                 : { x: 240, y: 170, width: 1470, height: 676 });
+
+        let colunas = await this.detectarColunasPorCabecalho(baseRegion);
+        if (!colunas) {
+            colunas = {
+                cod: { x: 0, width: Math.round(baseRegion.width * 0.15) },
+                produto: { x: Math.round(baseRegion.width * 0.15), width: Math.round(baseRegion.width * 0.5) },
+                localizacao: { x: Math.round(baseRegion.width * 0.66), width: Math.round(baseRegion.width * 0.14) },
+                qtd: { x: Math.round(baseRegion.width * 0.8), width: Math.round(baseRegion.width * 0.08) }
+            };
+        }
 
         const HEADER_HEIGHT = 24;
         const rowTolerance = 12;
@@ -1425,84 +1453,6 @@ class VisionBot {
         }
 
         const sortedKeys = Object.keys(rows).map(k => parseInt(k, 10)).sort((a, b) => a - b);
-        let headerRowKey = null;
-        const headerScores = {};
-        const headerTokens = [
-            { key: 'cod', match: t => t.includes('cod') || t.includes('cód') },
-            { key: 'fabricante', match: t => t.includes('fabric') },
-            { key: 'produto', match: t => t.includes('prod') },
-            { key: 'localizacao', match: t => t.includes('local') || t.includes('loc') },
-            { key: 'qtd', match: t => t === 'qtd' || t.includes('qtd') || t.includes('qtde') }
-        ];
-
-        for (const key of sortedKeys) {
-            const rowWords = rows[key];
-            const rowText = rowWords.map(w => w.text.toLowerCase()).join(' ');
-            let score = 0;
-            for (const tok of headerTokens) {
-                if (tok.match(rowText)) score++;
-            }
-            if (score > 0) {
-                headerScores[key] = score;
-            }
-        }
-        if (Object.keys(headerScores).length) {
-            headerRowKey = Object.keys(headerScores)
-                .map(k => parseInt(k, 10))
-                .sort((a, b) => headerScores[b] - headerScores[a])[0];
-        }
-
-        let colunas = {
-            cod: { x: 0, width: Math.round(baseRegion.width * 0.15) },
-            produto: { x: Math.round(baseRegion.width * 0.15), width: Math.round(baseRegion.width * 0.48) },
-            localizacao: { x: Math.round(baseRegion.width * 0.625), width: Math.round(baseRegion.width * 0.12) },
-            qtd: { x: Math.round(baseRegion.width * 0.748), width: Math.round(baseRegion.width * 0.08) }
-        };
-
-        if (headerRowKey !== null && rows[headerRowKey]) {
-            const headerWords = rows[headerRowKey].sort((a, b) => a.bbox.x0 - b.bbox.x0);
-            const centers = {};
-            for (const w of headerWords) {
-                const text = w.text.toLowerCase();
-                const centerX = (w.bbox.x0 + w.bbox.x1) / 2 - baseRegion.x;
-                if (text.includes('cod') || text.includes('cód')) {
-                    centers.cod = centers.cod ?? centerX;
-                }
-                if (text.includes('fabric')) {
-                    centers.cod = centers.cod ?? centerX;
-                }
-                if (text.includes('prod')) {
-                    centers.produto = centers.produto ?? centerX;
-                }
-                if (text.includes('local') || text.includes('loc')) {
-                    centers.localizacao = centers.localizacao ?? centerX;
-                }
-                if (text === 'qtd' || text.includes('qtd') || text.includes('qtde')) {
-                    centers.qtd = centers.qtd ?? centerX;
-                }
-            }
-            const ordered = ['cod', 'produto', 'localizacao', 'qtd'].map(k => ({
-                key: k,
-                x: centers[k]
-            })).filter(c => typeof c.x === 'number').sort((a, b) => a.x - b.x);
-            if (ordered.length >= 3) {
-                const bounds = [];
-                for (let i = 0; i < ordered.length - 1; i++) {
-                    bounds.push(Math.round((ordered[i].x + ordered[i + 1].x) / 2));
-                }
-                const startX = 0;
-                const endX = baseRegion.width;
-                const cols = {};
-                for (let i = 0; i < ordered.length; i++) {
-                    const left = i === 0 ? startX : bounds[i - 1];
-                    const right = i === ordered.length - 1 ? endX : bounds[i];
-                    cols[ordered[i].key] = { x: left, width: Math.max(10, right - left) };
-                }
-                if (cols.cod && cols.produto && cols.localizacao && cols.qtd) {
-                    colunas = cols;
-                }
-            }
-        }
         const itens = [];
 
         for (const key of sortedKeys) {
@@ -1510,7 +1460,6 @@ class VisionBot {
             if (rowWords.length === 0) continue;
 
             const fullText = rowWords.map(w => w.text).join(' ').toLowerCase();
-            if (key === headerRowKey) continue;
             if (fullText.includes('cod') && fullText.includes('produto')) continue;
 
             const codParts = [];

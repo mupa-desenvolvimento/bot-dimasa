@@ -1,11 +1,26 @@
+# Dependencies
 node_modules/
+
+# Environment / secrets
 .env
+
+# Logs and debug artifacts
 debug_*.png
-debug_*.txt
-*.log
-prints/
-output/
+processing_report.json
+execution.log
+debug_log.txt
+
+# OCR prints and results
+prints/*.png
+prints/test_ocr_results.json
+prints/found_text.txt
+prints/all_invoices_cumulative.txt
+prints/ocr_result.txt
+
+# Generated invoices data
+invoice_*.json
+invoice_data_loop.json
+
+# OS files
 .DS_Store
 Thumbs.db
-por.traineddata
-recordings/
