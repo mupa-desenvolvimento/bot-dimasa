@@ -1,127 +1,252 @@
 {
-    "setup_steps": [
-        {
-            "action": "click",
-            "description": "Botão Faturamento no menu superior",
-            "x": 110,
-            "y": 35,
-            "wait_before": 35000,
-            "wait_after": 1000
-        },
-        {
-            "action": "click",
-            "description": "Opção Entrada no menu suspenso",
-            "x": 135,
-            "y": 66,
-            "wait_after": 1000
-        },
-        {
-            "action": "click",
-            "description": "Opção Fila de Notas de Entrada no submenu",
-            "x": 350,
-            "y": 66,
-            "wait_after": 5000
-        },
-        {
-            "action": "click",
-            "description": "Clique 4 Botão em Trânsito",
-            "x": 610,
-            "y": 400,
-            "wait_after": 1000
-        },
-        {
-            "action": "click",
-            "description": "Clique 5 (Visualizar a lista de Notas de Entrada)",
-            "x": 655,
-            "y": 368,
-            "wait_after": 5000
-        }
-    ],
-    "invoice_loop_steps": [
-        { 
-            "description": "[{{nf}}] Focus Search Field", 
-            "action": "click", 
-            "x": 230, 
-            "y": 285, 
-            "wait_after": 500 
-        },
-        { 
-            "description": "[{{nf}}] Clear Field", 
-            "action": "keypress", 
-            "key": "SelectAll_Delete", 
-            "wait_after": 200 
-        },
-        { 
-            "description": "[{{nf}}] Type NF Number", 
-            "action": "type", 
-            "text": "{{nf}}", 
-            "wait_after": 1000 
-        },
-        { 
-            "description": "[{{nf}}] Press Enter", 
-            "action": "keypress", 
-            "key": "Enter", 
-            "wait_after": 3000 
-        },
-        { 
-            "description": "[{{nf}}] Open Invoice", 
-            "action": "double_click", 
-            "x": 600, 
-            "y": 350, 
-            "wait_after": 5000 
-        },
-        { 
-            "description": "[{{nf}}] Validate Screen", 
-            "action": "wait_for_text", 
-            "text": "Nota Fiscal", 
-            "timeout": 10000 
-        },
-        { 
-            "description": "[{{nf}}] Extract Access Key", 
-            "action": "ocr_region", 
-            "x": 600, 
-            "y": 120, 
-            "width": 300, 
-            "height": 30, 
-            "psm": "7", 
-            "save_key": "access_key" 
-        },
-        { 
-            "description": "[{{nf}}] Click Items Tab", 
-            "action": "click", 
-            "x": 100, 
-            "y": 300, 
-            "wait_after": 2000 
-        },
-        { 
-            "description": "[{{nf}}] Extract Items", 
-            "action": "extract_table_items", 
-            "save_key": "items" 
-        },
-        { 
-            "description": "[{{nf}}] Save Data", 
-            "action": "save_json", 
-            "nf": "{{nf}}" 
-        },
-        { 
-            "description": "[{{nf}}] Close Window", 
-            "action": "click", 
-            "x": 900, 
-            "y": 50, 
-            "wait_after": 1000 
-        },
-        { 
-            "description": "[{{nf}}] Handle Unsaved Warning", 
-            "action": "conditional_click", 
-            "check_text": "Deseja salvar", 
-            "click_text": "Não", 
-            "wait_after": 1000 
-        },
-        { 
-            "description": "[{{nf}}] Return to List", 
-            "action": "wait_for_text", 
-            "text": "Fila de Notas", 
-            "timeout": 5000 
-        }
-    ]
+  "setup_steps": [
+    {
+      "action": "click",
+      "description": "Botão Faturamento no menu superior",
+      "x": 110,
+      "y": 35,
+      "wait_before": 15000,
+      "wait_after": 1000
+    },
+    {
+      "action": "click",
+      "description": "Opção Entrada no menu suspenso",
+      "x": 135,
+      "y": 66,
+      "wait_after": 1000
+    },
+    {
+      "action": "click",
+      "description": "Opção Fila de Notas de Entrada no submenu",
+      "x": 350,
+      "y": 66,
+      "wait_after": 5000
+    },
+    {
+      "action": "click",
+      "description": "Clique 4 Botão em Trânsito",
+      "x": 610,
+      "y": 375,
+      "wait_after": 1000
+    },
+    {
+      "action": "click",
+      "description": "Clique 5 (Visualizar a lista de Notas de Entrada)",
+      "x": 655,
+      "y": 360,
+      "wait_after": 5000
+    },
+    {
+      "action": "screenshot_region",
+      "description": "Print Lista Parte 1",
+      "x": 680,
+      "y": 320,
+      "width": 90,
+      "height": 460,
+      "filename": "list_part_1.png",
+      "wait_after": 1000
+    },
+    {
+      "action": "ocr_region",
+      "description": "OCR Lista Parte 1",
+      "x": 680,
+      "y": 320,
+      "width": 90,
+      "height": 460,
+      "psm": "6",
+      "wait_after": 1000
+    },
+    {
+      "action": "drag",
+      "description": "Arrastar Barra de Rolagem (Topo -> Meio)",
+      "startX": 1405,
+      "startY": 320,
+      "endX": 1405,
+      "endY": 470,
+      "wait_after": 2000
+    },
+    {
+      "action": "screenshot_region",
+      "description": "Print Lista Parte 2",
+      "x": 680,
+      "y": 320,
+      "width": 120,
+      "height": 460,
+      "filename": "list_part_2.png",
+      "wait_after": 1000
+    },
+    {
+      "action": "ocr_region",
+      "description": "OCR Lista Parte 2",
+      "x": 680,
+      "y": 320,
+      "width": 120,
+      "height": 460,
+      "psm": "6",
+      "wait_after": 1000
+    },
+    {
+      "action": "drag",
+      "description": "Arrastar Barra de Rolagem (Meio -> Fim)",
+      "startX": 1405,
+      "startY": 475,
+      "endX": 1405,
+      "endY": 650,
+      "wait_after": 2000
+    },
+    {
+      "action": "screenshot_region",
+      "description": "Print Lista Parte 3",
+      "x": 680,
+      "y": 320,
+      "width": 120,
+      "height": 460,
+      "filename": "list_part_3.png",
+      "wait_after": 1000
+    },
+    {
+      "action": "ocr_region",
+      "description": "OCR Lista Parte 3",
+      "x": 680,
+      "y": 320,
+      "width": 120,
+      "height": 460,
+      "psm": "6",
+      "wait_after": 1000
+    },
+    {
+      "action": "consolidate_ocr_list",
+      "description": "Gerar Lista Final de NFs",
+      "wait_after": 1000
+    }
+  ],
+  "invoice_loop_steps": [
+    {
+      "action": "click_and_clear",
+      "description": "1. Double click e limpar campo 'Achar Nota'",
+      "x": 1310,
+      "y": 800,
+      "wait_after": 500
+    },
+    {
+      "action": "type",
+      "description": "2. Digitar NF {{nf}}",
+      "text": "{{nf}}",
+      "x": 1310,
+      "y": 800,
+      "wait_after": 500
+    },
+    {
+      "action": "click",
+      "description": "3. Clicar botão 'Achar' após digitar NF",
+      "x": 1380,
+      "y": 800,
+      "wait_after": 800
+    },
+    {
+      "action": "double_click",
+      "description": "4. Selecionar NF na janela 'Seleção de Registros'",
+      "x": 717,
+      "y": 494,
+      "wait_after": 1500
+    },
+    {
+      "action": "click",
+      "description": "5. Clique em área de detalhes (1)",
+      "x": 1174,
+      "y": 436,
+      "wait_after": 800
+    },
+    {
+      "action": "double_click",
+      "description": "6. Double click em área de detalhes (2)",
+      "x": 1174,
+      "y": 436,
+      "wait_after": 800
+    },
+    {
+      "action": "extract_access_key",
+      "description": "7. Capturar chave de acesso vinculada à NF",
+      "wait_after": 500
+    },
+    {
+      "action": "click",
+      "description": "8. Clique em aba/controle superior (1)",
+      "x": 971,
+      "y": 337,
+      "wait_after": 800
+    },
+    {
+      "action": "click",
+      "description": "9. Maximizar janela Emissão de Etiqueta",
+      "x": 1308,
+      "y": 329,
+      "wait_after": 800,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "action": "screenshot_region",
+      "description": "10. Print tela Emissão de Etiqueta (itens da NF)",
+      "x": 215,
+      "y": 170,
+      "width": 1580,
+      "height": 800,
+      "filename": "etiqueta_items_{{nf}}.png",
+      "wait_after": 1000
+    },
+    {
+      "action": "extract_products",
+      "description": "11. Extrair itens da NF (código, descrição, localização, quantidade)",
+      "x": 215,
+      "y": 170,
+      "width": 0,
+      "height": 0,
+      "wait_after": 1000
+    },
+    {
+      "action": "save_invoice_data",
+      "description": "12. Salvar dados da NF + itens em JSON",
+      "wait_after": 500
+    },
+    {
+      "action": "click",
+      "description": "13. Fechar janela Emissão de Etiqueta (botão X)",
+      "x": 1895,
+      "y": 35,
+      "wait_after": 500,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "action": "click",
+      "description": "14. Fechar janela Nota Fiscal de Entrada (botão X)",
+      "x": 1367,
+      "y": 314,
+      "wait_after": 500
+    },
+    {
+      "action": "click",
+      "description": "15. Confirmar NÃO salvar alterações na NF",
+      "x": 995,
+      "y": 575,
+      "wait_after": 500,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "action": "click",
+      "description": "16. Clique final em rodapé/botão",
+      "x": 1300,
+      "y": 800,
+      "wait_after": 500
+    },
+    {
+      "action": "double_click",
+      "description": "17. Double click final em rodapé/botão",
+      "x": 1300,
+      "y": 800,
+      "wait_after": 500
+    }
+  ]
 }
