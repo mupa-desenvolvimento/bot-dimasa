@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node bot_visual.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ocr:prints": "node prints/test_ocr.js"
+    "ocr:prints": "node ocr_worker.js"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +16,10 @@
     "clipboardy": "^3.0.0",
     "express": "^5.2.1",
     "jimp": "^1.6.0",
-    "sharp": "^0.33.0",
     "playwright": "^1.57.0",
     "puppeteer": "^24.35.0",
-    "tesseract.js": "^7.0.0"
+    "sharp": "^0.33.0",
+    "tesseract.js": "^7.0.0",
+    "xlsx": "^0.18.5"
   }
 }

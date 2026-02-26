@@ -1,0 +1,1249 @@
+[2026-02-18T16:12:58.220Z] Calibrando colunas
+[2026-02-18T16:13:33.939Z] Calibrando colunas
+[2026-02-18T16:13:33.942Z] Calibração pronta
+[2026-02-18T16:13:33.943Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16215493.png
+[2026-02-18T16:13:35.326Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16215493.png: Jimp.read is not a function
+[2026-02-18T16:13:35.327Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16221629.png
+[2026-02-18T16:13:36.499Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16221629.png: Jimp.read is not a function
+[2026-02-18T16:13:36.500Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222505.png
+[2026-02-18T16:13:37.659Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222505.png: Jimp.read is not a function
+[2026-02-18T16:13:37.660Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222506.png
+[2026-02-18T16:13:38.907Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222506.png: Jimp.read is not a function
+[2026-02-18T16:13:38.908Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16223002.png
+[2026-02-18T16:13:40.052Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16223002.png: Jimp.read is not a function
+[2026-02-18T16:13:40.053Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225486.png
+[2026-02-18T16:13:41.552Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225486.png: Jimp.read is not a function
+[2026-02-18T16:13:41.553Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225487.png
+[2026-02-18T16:13:42.758Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225487.png: Jimp.read is not a function
+[2026-02-18T16:13:42.759Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225525.png
+[2026-02-18T16:13:43.902Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225525.png: Jimp.read is not a function
+[2026-02-18T16:13:43.903Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225526.png
+[2026-02-18T16:13:45.972Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225526.png: Jimp.read is not a function
+[2026-02-18T16:13:45.973Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225527.png
+[2026-02-18T16:13:47.239Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225527.png: Jimp.read is not a function
+[2026-02-18T16:13:47.240Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231164.png
+[2026-02-18T16:13:48.823Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231164.png: Jimp.read is not a function
+[2026-02-18T16:13:48.824Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231314.png
+[2026-02-18T16:13:49.975Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231314.png: Jimp.read is not a function
+[2026-02-18T16:13:49.976Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231429.png
+[2026-02-18T16:13:51.404Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231429.png: Jimp.read is not a function
+[2026-02-18T16:13:51.405Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231752.png
+[2026-02-18T16:13:52.552Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231752.png: Jimp.read is not a function
+[2026-02-18T16:13:52.554Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231753.png
+[2026-02-18T16:13:54.912Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231753.png: Jimp.read is not a function
+[2026-02-18T16:13:54.912Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231774.png
+[2026-02-18T16:13:58.376Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231774.png: Jimp.read is not a function
+[2026-02-18T16:13:58.377Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_49077.png
+[2026-02-18T16:13:59.499Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_49077.png: Jimp.read is not a function
+[2026-02-18T16:13:59.500Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_85451.png
+[2026-02-18T16:14:00.695Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_85451.png: Jimp.read is not a function
+[2026-02-18T16:14:00.696Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T16:14:01.318Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png: Jimp.read is not a function
+[2026-02-18T16:14:01.319Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T16:14:02.109Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png: Jimp.read is not a function
+[2026-02-18T16:14:02.110Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T16:14:02.824Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png: Jimp.read is not a function
+[2026-02-18T16:14:02.825Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16215493.png
+[2026-02-18T16:14:03.308Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16215493.png: Jimp.read is not a function
+[2026-02-18T16:14:03.309Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16221629.png
+[2026-02-18T16:14:03.847Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16221629.png: Jimp.read is not a function
+[2026-02-18T16:14:03.848Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222505.png
+[2026-02-18T16:14:04.375Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222505.png: Jimp.read is not a function
+[2026-02-18T16:14:04.376Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222506.png
+[2026-02-18T16:14:04.869Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222506.png: Jimp.read is not a function
+[2026-02-18T16:14:04.870Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16223002.png
+[2026-02-18T16:14:05.382Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16223002.png: Jimp.read is not a function
+[2026-02-18T16:14:05.383Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225486.png
+[2026-02-18T16:14:05.931Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225486.png: Jimp.read is not a function
+[2026-02-18T16:14:05.932Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225487.png
+[2026-02-18T16:14:06.476Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225487.png: Jimp.read is not a function
+[2026-02-18T16:14:06.477Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225525.png
+[2026-02-18T16:14:06.955Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225525.png: Jimp.read is not a function
+[2026-02-18T16:14:06.956Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225526.png
+[2026-02-18T16:14:08.170Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225526.png: Jimp.read is not a function
+[2026-02-18T16:14:08.171Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225527.png
+[2026-02-18T16:14:08.758Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225527.png: Jimp.read is not a function
+[2026-02-18T16:14:08.760Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231164.png
+[2026-02-18T16:14:09.327Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231164.png: Jimp.read is not a function
+[2026-02-18T16:14:09.328Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231314.png
+[2026-02-18T16:14:09.814Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231314.png: Jimp.read is not a function
+[2026-02-18T16:14:09.815Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231429.png
+[2026-02-18T16:14:10.324Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231429.png: Jimp.read is not a function
+[2026-02-18T16:14:10.325Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231752.png
+[2026-02-18T16:14:10.858Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231752.png: Jimp.read is not a function
+[2026-02-18T16:14:10.859Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231753.png
+[2026-02-18T16:14:11.856Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231753.png: Jimp.read is not a function
+[2026-02-18T16:14:11.857Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231774.png
+[2026-02-18T16:14:13.373Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231774.png: Jimp.read is not a function
+[2026-02-18T16:14:13.375Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_49077.png
+[2026-02-18T16:14:13.903Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_49077.png: Jimp.read is not a function
+[2026-02-18T16:14:13.904Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_85451.png
+[2026-02-18T16:14:14.409Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_85451.png: Jimp.read is not a function
+[2026-02-18T16:14:14.411Z] Monitorando pasta /prints
+[2026-02-18T16:30:22.316Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16215493.png
+[2026-02-18T16:30:22.926Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432222366.png
+[2026-02-18T16:30:22.966Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432222366.png
+[2026-02-18T16:30:23.572Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223036.png
+[2026-02-18T16:30:23.590Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223036.png
+[2026-02-18T16:30:23.682Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223048.png
+[2026-02-18T16:30:23.776Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223048.png
+[2026-02-18T16:30:24.290Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223780.png
+[2026-02-18T16:30:24.314Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223780.png
+[2026-02-18T16:30:24.319Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223786.png
+[2026-02-18T16:30:24.323Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223786.png
+[2026-02-18T16:30:24.345Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223832.png
+[2026-02-18T16:30:24.352Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223832.png
+[2026-02-18T16:30:24.354Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223837.png
+[2026-02-18T16:30:24.362Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223837.png
+[2026-02-18T16:30:24.938Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224413.png
+[2026-02-18T16:30:25.009Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16215493.png: j.getBufferAsync is not a function
+[2026-02-18T16:30:25.196Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16221629.png
+[2026-02-18T16:30:25.433Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224413.png
+[2026-02-18T16:30:25.475Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224422.png
+[2026-02-18T16:30:25.515Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224422.png
+[2026-02-18T16:30:25.520Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224426.png
+[2026-02-18T16:30:25.580Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224426.png
+[2026-02-18T16:30:25.729Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224496.png
+[2026-02-18T16:30:25.745Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224496.png
+[2026-02-18T16:30:25.747Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224545.png
+[2026-02-18T16:30:25.760Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224545.png
+[2026-02-18T16:30:25.876Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224550.png
+[2026-02-18T16:30:26.176Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224550.png
+[2026-02-18T16:30:26.297Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224554.png
+[2026-02-18T16:30:26.413Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224554.png
+[2026-02-18T16:30:26.603Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224554.png
+[2026-02-18T16:30:26.610Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224558.png
+[2026-02-18T16:30:26.614Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224558.png
+[2026-02-18T16:30:27.652Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225403.png
+[2026-02-18T16:30:27.656Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225403.png
+[2026-02-18T16:30:28.288Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225676.png
+[2026-02-18T16:30:28.307Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225676.png
+[2026-02-18T16:30:28.380Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225707.png
+[2026-02-18T16:30:28.392Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225707.png
+[2026-02-18T16:30:28.439Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225721.png
+[2026-02-18T16:30:28.463Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225721.png
+[2026-02-18T16:30:28.487Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225721.png
+[2026-02-18T16:30:28.496Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225724.png
+[2026-02-18T16:30:28.500Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225724.png
+[2026-02-18T16:30:28.516Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225724.png
+[2026-02-18T16:30:28.533Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225727.png
+[2026-02-18T16:30:28.536Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225727.png
+[2026-02-18T16:30:28.538Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432225727.png
+[2026-02-18T16:30:29.062Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226625.png
+[2026-02-18T16:30:29.251Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226625.png
+[2026-02-18T16:30:29.252Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226628.png
+[2026-02-18T16:30:29.253Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226628.png
+[2026-02-18T16:30:29.254Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226632.png
+[2026-02-18T16:30:29.255Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226632.png
+[2026-02-18T16:30:29.256Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226636.png
+[2026-02-18T16:30:29.256Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226636.png
+[2026-02-18T16:30:29.257Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226638.png
+[2026-02-18T16:30:29.258Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226638.png
+[2026-02-18T16:30:29.258Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226641.png
+[2026-02-18T16:30:29.259Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226641.png
+[2026-02-18T16:30:29.260Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226644.png
+[2026-02-18T16:30:29.264Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226644.png
+[2026-02-18T16:30:29.265Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226646.png
+[2026-02-18T16:30:29.266Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432226646.png
+[2026-02-18T16:30:29.271Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227687.png
+[2026-02-18T16:30:29.272Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227687.png
+[2026-02-18T16:30:29.274Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227698.png
+[2026-02-18T16:30:29.286Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227698.png
+[2026-02-18T16:30:29.295Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227701.png
+[2026-02-18T16:30:29.297Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227701.png
+[2026-02-18T16:30:29.299Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227704.png
+[2026-02-18T16:30:29.395Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432227704.png
+[2026-02-18T16:30:29.398Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228547.png
+[2026-02-18T16:30:29.416Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228547.png
+[2026-02-18T16:30:29.420Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228549.png
+[2026-02-18T16:30:29.422Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228549.png
+[2026-02-18T16:30:29.423Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228560.png
+[2026-02-18T16:30:29.611Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228560.png
+[2026-02-18T16:30:29.849Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228560.png
+[2026-02-18T16:30:29.944Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228561.png
+[2026-02-18T16:30:29.945Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228561.png
+[2026-02-18T16:30:29.947Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228564.png
+[2026-02-18T16:30:29.948Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228564.png
+[2026-02-18T16:30:29.951Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228589.png
+[2026-02-18T16:30:29.953Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228589.png
+[2026-02-18T16:30:29.953Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228592.png
+[2026-02-18T16:30:29.954Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228592.png
+[2026-02-18T16:30:29.955Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228597.png
+[2026-02-18T16:30:29.956Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228597.png
+[2026-02-18T16:30:29.959Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432222366.png: Jimp.read is not a function
+[2026-02-18T16:30:29.960Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228613.png
+[2026-02-18T16:30:29.961Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228613.png
+[2026-02-18T16:30:29.962Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228619.png
+[2026-02-18T16:30:29.963Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228619.png
+[2026-02-18T16:30:29.964Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228621.png
+[2026-02-18T16:30:29.965Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228621.png
+[2026-02-18T16:30:29.965Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228624.png
+[2026-02-18T16:30:29.966Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228624.png
+[2026-02-18T16:30:29.967Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228636.png
+[2026-02-18T16:30:29.968Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228636.png
+[2026-02-18T16:30:29.969Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228852.png
+[2026-02-18T16:30:29.970Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228852.png
+[2026-02-18T16:30:29.971Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228852.png
+[2026-02-18T16:30:29.971Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228858.png
+[2026-02-18T16:30:29.972Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228858.png
+[2026-02-18T16:30:29.973Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432228858.png
+[2026-02-18T16:30:30.185Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432222366.png: Jimp.read is not a function
+[2026-02-18T16:30:30.445Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223036.png: Jimp.read is not a function
+[2026-02-18T16:30:30.583Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223048.png: Jimp.read is not a function
+[2026-02-18T16:30:31.102Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230327.png
+[2026-02-18T16:30:31.104Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230327.png
+[2026-02-18T16:30:31.106Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230446.png
+[2026-02-18T16:30:31.108Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230446.png
+[2026-02-18T16:30:31.109Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230450.png
+[2026-02-18T16:30:31.111Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230450.png
+[2026-02-18T16:30:31.113Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230455.png
+[2026-02-18T16:30:31.115Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230455.png
+[2026-02-18T16:30:31.117Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230457.png
+[2026-02-18T16:30:31.121Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230457.png
+[2026-02-18T16:30:31.124Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230460.png
+[2026-02-18T16:30:31.131Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230460.png
+[2026-02-18T16:30:31.140Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230464.png
+[2026-02-18T16:30:31.145Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230464.png
+[2026-02-18T16:30:31.147Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230467.png
+[2026-02-18T16:30:31.155Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230467.png
+[2026-02-18T16:30:31.160Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230470.png
+[2026-02-18T16:30:31.173Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230470.png
+[2026-02-18T16:30:31.179Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230473.png
+[2026-02-18T16:30:31.188Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230473.png
+[2026-02-18T16:30:31.195Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230476.png
+[2026-02-18T16:30:31.203Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230476.png
+[2026-02-18T16:30:32.201Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230478.png
+[2026-02-18T16:30:32.489Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230478.png
+[2026-02-18T16:30:32.890Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230479.png
+[2026-02-18T16:30:32.999Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230479.png
+[2026-02-18T16:30:33.461Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223048.png: Jimp.read is not a function
+[2026-02-18T16:30:33.486Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223036.png: Jimp.read is not a function
+[2026-02-18T16:30:36.155Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230575.png
+[2026-02-18T16:30:36.273Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230575.png
+[2026-02-18T16:30:36.461Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230577.png
+[2026-02-18T16:30:36.496Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230577.png
+[2026-02-18T16:30:36.497Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230580.png
+[2026-02-18T16:30:36.499Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230580.png
+[2026-02-18T16:30:36.522Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230599.png
+[2026-02-18T16:30:36.635Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230599.png
+[2026-02-18T16:30:36.648Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230603.png
+[2026-02-18T16:30:36.651Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230603.png
+[2026-02-18T16:30:36.660Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230731.png
+[2026-02-18T16:30:36.758Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230731.png
+[2026-02-18T16:30:36.889Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230731.png
+[2026-02-18T16:30:36.905Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230736.png
+[2026-02-18T16:30:36.907Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230736.png
+[2026-02-18T16:30:36.909Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230740.png
+[2026-02-18T16:30:36.911Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230740.png
+[2026-02-18T16:30:36.914Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230740.png
+[2026-02-18T16:30:36.918Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230742.png
+[2026-02-18T16:30:36.923Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230742.png
+[2026-02-18T16:30:36.925Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230742.png
+[2026-02-18T16:30:36.928Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230744.png
+[2026-02-18T16:30:36.931Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230744.png
+[2026-02-18T16:30:36.936Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230744.png
+[2026-02-18T16:30:36.942Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230747.png
+[2026-02-18T16:30:36.945Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230747.png
+[2026-02-18T16:30:36.947Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230747.png
+[2026-02-18T16:30:36.956Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230803.png
+[2026-02-18T16:30:36.960Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230803.png
+[2026-02-18T16:30:36.962Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230806.png
+[2026-02-18T16:30:36.963Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230806.png
+[2026-02-18T16:30:36.965Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230850.png
+[2026-02-18T16:30:41.465Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16221629.png: j.getBufferAsync is not a function
+[2026-02-18T16:30:41.867Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222505.png
+[2026-02-18T16:30:43.958Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230850.png
+[2026-02-18T16:30:43.962Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432230850.png
+[2026-02-18T16:30:47.990Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223832.png: Jimp.read is not a function
+[2026-02-18T16:30:48.971Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243965.png
+[2026-02-18T16:30:49.119Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243965.png
+[2026-02-18T16:30:49.121Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243970.png
+[2026-02-18T16:30:49.122Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243970.png
+[2026-02-18T16:30:49.123Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243973.png
+[2026-02-18T16:30:49.124Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243973.png
+[2026-02-18T16:30:49.125Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243986.png
+[2026-02-18T16:30:49.126Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243986.png
+[2026-02-18T16:30:49.127Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243994.png
+[2026-02-18T16:30:49.128Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432243994.png
+[2026-02-18T16:30:49.129Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244002.png
+[2026-02-18T16:30:49.130Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244002.png
+[2026-02-18T16:30:49.131Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244012.png
+[2026-02-18T16:30:49.133Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244012.png
+[2026-02-18T16:30:49.135Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244022.png
+[2026-02-18T16:30:49.136Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244022.png
+[2026-02-18T16:30:49.137Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244025.png
+[2026-02-18T16:30:49.138Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244025.png
+[2026-02-18T16:30:49.139Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244028.png
+[2026-02-18T16:30:49.140Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244028.png
+[2026-02-18T16:30:49.142Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244034.png
+[2026-02-18T16:30:49.143Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244034.png
+[2026-02-18T16:30:49.144Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244162.png
+[2026-02-18T16:30:49.145Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244162.png
+[2026-02-18T16:30:49.146Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244164.png
+[2026-02-18T16:30:49.147Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244164.png
+[2026-02-18T16:30:49.192Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244167.png
+[2026-02-18T16:30:49.222Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244167.png
+[2026-02-18T16:30:49.225Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244174.png
+[2026-02-18T16:30:49.227Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244174.png
+[2026-02-18T16:30:49.229Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244177.png
+[2026-02-18T16:30:49.231Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244177.png
+[2026-02-18T16:30:49.256Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244177.png
+[2026-02-18T16:30:49.297Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244182.png
+[2026-02-18T16:30:49.315Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244182.png
+[2026-02-18T16:30:49.321Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244482.png
+[2026-02-18T16:30:49.652Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244482.png
+[2026-02-18T16:30:49.678Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244485.png
+[2026-02-18T16:30:49.679Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244485.png
+[2026-02-18T16:30:49.680Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244491.png
+[2026-02-18T16:30:49.690Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432244491.png
+[2026-02-18T16:30:49.696Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245051.png
+[2026-02-18T16:30:49.705Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245051.png
+[2026-02-18T16:30:49.957Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245058.png
+[2026-02-18T16:30:50.089Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245058.png
+[2026-02-18T16:30:50.091Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245066.png
+[2026-02-18T16:30:50.157Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432245066.png
+[2026-02-18T16:30:50.178Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432247166.png
+[2026-02-18T16:30:50.182Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432247166.png
+[2026-02-18T16:30:50.188Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432247461.png
+[2026-02-18T16:30:50.270Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432247461.png
+[2026-02-18T16:30:52.846Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223786.png: Jimp.read is not a function
+[2026-02-18T16:30:54.609Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223832.png: Jimp.read is not a function
+[2026-02-18T16:30:54.874Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223837.png: Jimp.read is not a function
+[2026-02-18T16:30:55.010Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223786.png: Jimp.read is not a function
+[2026-02-18T16:30:55.162Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223837.png: Jimp.read is not a function
+[2026-02-18T16:30:55.363Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223780.png: Jimp.read is not a function
+[2026-02-18T16:31:00.011Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432223780.png: Jimp.read is not a function
+[2026-02-18T16:31:02.052Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222505.png: j.getBufferAsync is not a function
+[2026-02-18T16:31:02.972Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222506.png
+[2026-02-18T16:31:18.408Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224550.png: Jimp.read is not a function
+[2026-02-18T16:31:20.496Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224422.png: Jimp.read is not a function
+[2026-02-18T16:31:22.261Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224545.png: Jimp.read is not a function
+[2026-02-18T16:31:31.984Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224496.png: Jimp.read is not a function
+[2026-02-18T16:31:48.800Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224422.png: Jimp.read is not a function
+[2026-02-18T16:32:05.149Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224554.png: Jimp.read is not a function
+[2026-02-18T16:32:07.075Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771432224496.png: Jimp.read is not a function
+[2026-02-18T16:32:28.484Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16222506.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:28.508Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16223002.png
+[2026-02-18T16:32:32.470Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16223002.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:32.472Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225486.png
+[2026-02-18T16:32:34.823Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225486.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:34.825Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225487.png
+[2026-02-18T16:32:37.937Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225487.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:37.938Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225525.png
+[2026-02-18T16:32:39.725Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225525.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:39.726Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225526.png
+[2026-02-18T16:32:42.303Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225526.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:42.304Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225527.png
+[2026-02-18T16:32:43.903Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16225527.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:43.904Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231164.png
+[2026-02-18T16:32:46.021Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231164.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:46.022Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231314.png
+[2026-02-18T16:32:47.535Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231314.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:47.536Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231429.png
+[2026-02-18T16:32:49.176Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231429.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:49.178Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231752.png
+[2026-02-18T16:32:50.646Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231752.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:50.647Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231753.png
+[2026-02-18T16:32:53.523Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231753.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:53.524Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231774.png
+[2026-02-18T16:32:57.235Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_16231774.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:57.255Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_49077.png
+[2026-02-18T16:32:58.741Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_49077.png: j.getBufferAsync is not a function
+[2026-02-18T16:32:58.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_85451.png
+[2026-02-18T16:33:00.029Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\etiqueta_items_85451.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:00.030Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T16:33:00.687Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:00.688Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T16:33:01.429Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:01.430Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T16:33:02.118Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:02.119Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16215493.png
+[2026-02-18T16:33:02.650Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16215493.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:02.650Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16221629.png
+[2026-02-18T16:33:03.253Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16221629.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:03.254Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222505.png
+[2026-02-18T16:33:03.850Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222505.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:03.851Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222506.png
+[2026-02-18T16:33:04.442Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16222506.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:04.443Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16223002.png
+[2026-02-18T16:33:05.014Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16223002.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:05.015Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225486.png
+[2026-02-18T16:33:05.586Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225486.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:05.587Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225487.png
+[2026-02-18T16:33:06.168Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225487.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:06.169Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225525.png
+[2026-02-18T16:33:06.669Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225525.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:06.670Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225526.png
+[2026-02-18T16:33:07.884Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225526.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:07.885Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225527.png
+[2026-02-18T16:33:08.597Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16225527.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:08.598Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231164.png
+[2026-02-18T16:33:09.202Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231164.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:09.203Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231314.png
+[2026-02-18T16:33:09.778Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231314.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:09.779Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231429.png
+[2026-02-18T16:33:10.354Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231429.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:10.355Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231752.png
+[2026-02-18T16:33:10.862Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231752.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:10.863Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231753.png
+[2026-02-18T16:33:11.896Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231753.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:11.896Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231774.png
+[2026-02-18T16:33:13.293Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_16231774.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:13.294Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_49077.png
+[2026-02-18T16:33:13.795Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_49077.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:13.796Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_85451.png
+[2026-02-18T16:33:14.301Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tabela_crop_85451.png: j.getBufferAsync is not a function
+[2026-02-18T16:33:14.304Z] Monitorando pasta /prints
+[2026-02-18T17:41:12.625Z] Monitorando pasta /prints
+[2026-02-18T17:42:06.777Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T17:42:06.784Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T17:42:07.313Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526803.png
+[2026-02-18T17:42:07.315Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526803.png
+[2026-02-18T17:42:07.318Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526807.png
+[2026-02-18T17:42:07.325Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526807.png
+[2026-02-18T17:42:07.836Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527326.png
+[2026-02-18T17:42:07.838Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527326.png
+[2026-02-18T17:42:07.840Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527330.png
+[2026-02-18T17:42:07.844Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527330.png
+[2026-02-18T17:42:07.847Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527334.png
+[2026-02-18T17:42:07.848Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527334.png
+[2026-02-18T17:42:07.849Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png
+[2026-02-18T17:42:07.850Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png
+[2026-02-18T17:42:07.851Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png
+[2026-02-18T17:42:08.483Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527853.png
+[2026-02-18T17:42:08.487Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527853.png
+[2026-02-18T17:42:08.490Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527855.png
+[2026-02-18T17:42:08.491Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527855.png
+[2026-02-18T17:42:08.492Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527858.png
+[2026-02-18T17:42:08.493Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527858.png
+[2026-02-18T17:42:08.505Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png: Jimp.read is not a function
+[2026-02-18T17:42:08.507Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527978.png
+[2026-02-18T17:42:08.508Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527978.png
+[2026-02-18T17:42:08.508Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527982.png
+[2026-02-18T17:42:08.509Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527982.png
+[2026-02-18T17:42:08.572Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png
+[2026-02-18T17:42:08.652Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png
+[2026-02-18T17:42:08.657Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png
+[2026-02-18T17:42:08.659Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527986.png
+[2026-02-18T17:42:08.701Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527986.png
+[2026-02-18T17:42:08.702Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png
+[2026-02-18T17:42:08.702Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png
+[2026-02-18T17:42:08.705Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png
+[2026-02-18T17:42:08.705Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527989.png
+[2026-02-18T17:42:08.706Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527989.png
+[2026-02-18T17:42:11.197Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528708.png
+[2026-02-18T17:42:11.208Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528708.png
+[2026-02-18T17:42:11.209Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528709.png
+[2026-02-18T17:42:11.210Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528709.png
+[2026-02-18T17:42:11.210Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528714.png
+[2026-02-18T17:42:11.211Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528714.png
+[2026-02-18T17:42:11.214Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528716.png
+[2026-02-18T17:42:11.227Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528716.png
+[2026-02-18T17:42:11.231Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528756.png
+[2026-02-18T17:42:11.232Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528756.png
+[2026-02-18T17:42:11.233Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png
+[2026-02-18T17:42:11.234Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png
+[2026-02-18T17:42:11.234Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png
+[2026-02-18T17:42:11.235Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528759.png
+[2026-02-18T17:42:11.236Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528759.png
+[2026-02-18T17:42:11.237Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528760.png
+[2026-02-18T17:42:11.238Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528760.png
+[2026-02-18T17:42:11.238Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528764.png
+[2026-02-18T17:42:11.341Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528764.png
+[2026-02-18T17:42:11.432Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528767.png
+[2026-02-18T17:42:11.444Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528767.png
+[2026-02-18T17:42:11.448Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png
+[2026-02-18T17:42:11.449Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png
+[2026-02-18T17:42:11.452Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png
+[2026-02-18T17:42:11.454Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528771.png
+[2026-02-18T17:42:11.458Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528771.png
+[2026-02-18T17:42:11.460Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528773.png
+[2026-02-18T17:42:11.465Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528773.png
+[2026-02-18T17:42:11.467Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528819.png
+[2026-02-18T17:42:11.469Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528819.png
+[2026-02-18T17:42:11.476Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528821.png
+[2026-02-18T17:42:11.483Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528821.png
+[2026-02-18T17:42:11.584Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528822.png
+[2026-02-18T17:42:11.585Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528822.png
+[2026-02-18T17:42:11.587Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528824.png
+[2026-02-18T17:42:11.589Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528824.png
+[2026-02-18T17:42:11.590Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png
+[2026-02-18T17:42:11.592Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png
+[2026-02-18T17:42:11.625Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png
+[2026-02-18T17:42:11.627Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528827.png
+[2026-02-18T17:42:11.632Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528827.png
+[2026-02-18T17:42:11.633Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528831.png
+[2026-02-18T17:42:11.635Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528831.png
+[2026-02-18T17:42:12.088Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png: Jimp.read is not a function
+[2026-02-18T17:42:13.945Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531636.png
+[2026-02-18T17:42:14.735Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526803.png: Jimp.read is not a function
+[2026-02-18T17:42:14.736Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526807.png: Jimp.read is not a function
+[2026-02-18T17:42:14.737Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526803.png: Jimp.read is not a function
+[2026-02-18T17:42:15.006Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436526807.png: Jimp.read is not a function
+[2026-02-18T17:42:15.108Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531992.png
+[2026-02-18T17:42:15.111Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531992.png
+[2026-02-18T17:42:15.115Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531994.png
+[2026-02-18T17:42:15.116Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531994.png
+[2026-02-18T17:42:15.118Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531997.png
+[2026-02-18T17:42:15.281Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531997.png
+[2026-02-18T17:42:15.283Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531999.png
+[2026-02-18T17:42:15.284Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531999.png
+[2026-02-18T17:42:15.286Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532084.png
+[2026-02-18T17:42:15.287Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532084.png
+[2026-02-18T17:42:15.289Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png
+[2026-02-18T17:42:15.290Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png
+[2026-02-18T17:42:15.301Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png
+[2026-02-18T17:42:15.305Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436534723.png
+[2026-02-18T17:42:15.670Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436534723.png
+[2026-02-18T17:42:15.672Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535132.png
+[2026-02-18T17:42:15.932Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535132.png
+[2026-02-18T17:42:16.327Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535149.png
+[2026-02-18T17:42:16.344Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535149.png
+[2026-02-18T17:42:16.345Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png
+[2026-02-18T17:42:16.355Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png
+[2026-02-18T17:42:16.357Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png
+[2026-02-18T17:42:16.358Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535277.png
+[2026-02-18T17:42:16.359Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535277.png
+[2026-02-18T17:42:16.837Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535307.png
+[2026-02-18T17:42:16.838Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535307.png
+[2026-02-18T17:42:16.839Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535308.png
+[2026-02-18T17:42:16.881Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535308.png
+[2026-02-18T17:42:16.884Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535662.png
+[2026-02-18T17:42:16.891Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535662.png
+[2026-02-18T17:42:17.276Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535667.png
+[2026-02-18T17:42:17.279Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535667.png
+[2026-02-18T17:42:17.282Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535676.png
+[2026-02-18T17:42:17.285Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535676.png
+[2026-02-18T17:42:17.437Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535677.png
+[2026-02-18T17:42:17.442Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535677.png
+[2026-02-18T17:42:17.444Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535683.png
+[2026-02-18T17:42:17.514Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535683.png
+[2026-02-18T17:42:17.533Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png
+[2026-02-18T17:42:17.567Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png
+[2026-02-18T17:42:17.952Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png
+[2026-02-18T17:42:18.015Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png
+[2026-02-18T17:42:18.079Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png
+[2026-02-18T17:42:18.084Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png
+[2026-02-18T17:42:18.085Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png
+[2026-02-18T17:42:18.157Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png
+[2026-02-18T17:42:18.169Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png
+[2026-02-18T17:42:18.271Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536051.png
+[2026-02-18T17:42:18.273Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536051.png
+[2026-02-18T17:42:18.467Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536053.png
+[2026-02-18T17:42:18.469Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536053.png
+[2026-02-18T17:42:23.484Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536087.png
+[2026-02-18T17:42:23.518Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536087.png
+[2026-02-18T17:42:23.519Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536400.png
+[2026-02-18T17:42:24.476Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536400.png
+[2026-02-18T17:42:24.482Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536402.png
+[2026-02-18T17:42:24.484Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536402.png
+[2026-02-18T17:42:24.604Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T17:42:24.620Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T17:42:25.853Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527326.png: Jimp.read is not a function
+[2026-02-18T17:42:25.950Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png: Jimp.read is not a function
+[2026-02-18T17:42:25.983Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png: Jimp.read is not a function
+[2026-02-18T17:42:25.988Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527855.png: Jimp.read is not a function
+[2026-02-18T17:42:26.005Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436543978.png
+[2026-02-18T17:42:26.147Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436543978.png
+[2026-02-18T17:42:26.362Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544139.png
+[2026-02-18T17:42:26.390Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544139.png
+[2026-02-18T17:42:26.400Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544287.png
+[2026-02-18T17:42:26.530Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544287.png
+[2026-02-18T17:42:27.703Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527334.png: Jimp.read is not a function
+[2026-02-18T17:42:27.753Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527989.png: Jimp.read is not a function
+[2026-02-18T17:42:29.190Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png
+[2026-02-18T17:42:29.740Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png: Jimp.read is not a function
+[2026-02-18T17:42:29.838Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527326.png: Jimp.read is not a function
+[2026-02-18T17:42:31.887Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png
+[2026-02-18T17:42:31.946Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png
+[2026-02-18T17:42:31.977Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png
+[2026-02-18T17:42:31.981Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png
+[2026-02-18T17:42:32.010Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png
+[2026-02-18T17:42:32.013Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546683.png
+[2026-02-18T17:42:32.037Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546683.png
+[2026-02-18T17:42:32.040Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546804.png
+[2026-02-18T17:42:32.146Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546804.png
+[2026-02-18T17:42:32.147Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546889.png
+[2026-02-18T17:42:32.182Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546889.png
+[2026-02-18T17:42:32.185Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547141.png
+[2026-02-18T17:42:32.187Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547141.png
+[2026-02-18T17:42:32.220Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png
+[2026-02-18T17:42:32.222Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png
+[2026-02-18T17:42:32.224Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png
+[2026-02-18T17:42:32.225Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png
+[2026-02-18T17:42:32.268Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png
+[2026-02-18T17:42:32.270Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png
+[2026-02-18T17:42:32.272Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png
+[2026-02-18T17:42:32.276Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png
+[2026-02-18T17:42:32.281Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png
+[2026-02-18T17:42:32.332Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547569.png
+[2026-02-18T17:42:32.381Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547569.png
+[2026-02-18T17:42:32.414Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547754.png
+[2026-02-18T17:42:32.416Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547754.png
+[2026-02-18T17:42:32.718Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527984.png: Jimp.read is not a function
+[2026-02-18T17:42:32.772Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png: Jimp.read is not a function
+[2026-02-18T17:42:32.858Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png: Jimp.read is not a function
+[2026-02-18T17:42:39.054Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png
+[2026-02-18T17:42:39.350Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png
+[2026-02-18T17:42:39.420Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png
+[2026-02-18T17:42:39.693Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527330.png: Jimp.read is not a function
+[2026-02-18T17:42:43.889Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436552923.png
+[2026-02-18T17:42:43.910Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436552923.png
+[2026-02-18T17:42:43.946Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553302.png
+[2026-02-18T17:42:43.953Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553302.png
+[2026-02-18T17:42:44.037Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553382.png
+[2026-02-18T17:42:44.135Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553382.png
+[2026-02-18T17:42:44.238Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png
+[2026-02-18T17:42:44.239Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png
+[2026-02-18T17:42:44.366Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png
+[2026-02-18T17:42:44.367Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553502.png
+[2026-02-18T17:42:44.453Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553502.png
+[2026-02-18T17:42:44.454Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553534.png
+[2026-02-18T17:42:44.455Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553534.png
+[2026-02-18T17:42:44.520Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png
+[2026-02-18T17:42:44.599Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png
+[2026-02-18T17:42:44.605Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png
+[2026-02-18T17:42:44.658Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553951.png
+[2026-02-18T17:42:44.660Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553951.png
+[2026-02-18T17:42:44.716Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554160.png
+[2026-02-18T17:42:44.718Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554160.png
+[2026-02-18T17:42:44.719Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png
+[2026-02-18T17:42:44.720Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png
+[2026-02-18T17:42:44.722Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png
+[2026-02-18T17:42:44.724Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png
+[2026-02-18T17:42:44.726Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png
+[2026-02-18T17:42:44.731Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png
+[2026-02-18T17:42:44.741Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554746.png
+[2026-02-18T17:42:44.792Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554746.png
+[2026-02-18T17:42:44.794Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555005.png
+[2026-02-18T17:42:44.798Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555005.png
+[2026-02-18T17:42:44.843Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555258.png
+[2026-02-18T17:42:44.847Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555258.png
+[2026-02-18T17:42:44.853Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555539.png
+[2026-02-18T17:42:44.854Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555539.png
+[2026-02-18T17:42:44.915Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png
+[2026-02-18T17:42:44.960Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png
+[2026-02-18T17:42:44.963Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png
+[2026-02-18T17:42:44.964Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555851.png
+[2026-02-18T17:42:44.965Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555851.png
+[2026-02-18T17:42:45.015Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555856.png
+[2026-02-18T17:42:45.016Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555856.png
+[2026-02-18T17:42:45.017Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555900.png
+[2026-02-18T17:42:45.018Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555900.png
+[2026-02-18T17:42:45.052Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556059.png
+[2026-02-18T17:42:45.053Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556059.png
+[2026-02-18T17:42:45.070Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556067.png
+[2026-02-18T17:42:45.071Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556067.png
+[2026-02-18T17:42:45.607Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528760.png: Jimp.read is not a function
+[2026-02-18T17:42:48.450Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556760.png
+[2026-02-18T17:42:48.493Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556760.png
+[2026-02-18T17:42:48.495Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556850.png
+[2026-02-18T17:42:48.573Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556850.png
+[2026-02-18T17:42:48.575Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png
+[2026-02-18T17:42:48.621Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png
+[2026-02-18T17:42:48.672Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png
+[2026-02-18T17:42:48.673Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557031.png
+[2026-02-18T17:42:48.674Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557031.png
+[2026-02-18T17:42:48.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557067.png
+[2026-02-18T17:42:48.744Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557067.png
+[2026-02-18T17:42:50.823Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527978.png: Jimp.read is not a function
+[2026-02-18T17:42:50.831Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528716.png: Jimp.read is not a function
+[2026-02-18T17:42:50.832Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527855.png: Jimp.read is not a function
+[2026-02-18T17:42:50.832Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png: Jimp.read is not a function
+[2026-02-18T17:42:50.893Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528831.png: Jimp.read is not a function
+[2026-02-18T17:42:50.893Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528709.png: Jimp.read is not a function
+[2026-02-18T17:42:50.896Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528764.png: Jimp.read is not a function
+[2026-02-18T17:42:50.931Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527982.png: Jimp.read is not a function
+[2026-02-18T17:42:50.933Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png: Jimp.read is not a function
+[2026-02-18T17:42:50.963Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528822.png: Jimp.read is not a function
+[2026-02-18T17:42:50.964Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528708.png: Jimp.read is not a function
+[2026-02-18T17:42:50.965Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png: Jimp.read is not a function
+[2026-02-18T17:42:50.966Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png: Jimp.read is not a function
+[2026-02-18T17:42:51.056Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528824.png: Jimp.read is not a function
+[2026-02-18T17:42:51.158Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528771.png: Jimp.read is not a function
+[2026-02-18T17:42:52.689Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436560717.png
+[2026-02-18T17:42:52.692Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436560717.png
+[2026-02-18T17:42:53.512Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528819.png: Jimp.read is not a function
+[2026-02-18T17:42:53.587Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png: Jimp.read is not a function
+[2026-02-18T17:42:53.589Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528767.png: Jimp.read is not a function
+[2026-02-18T17:42:53.664Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528827.png: Jimp.read is not a function
+[2026-02-18T17:42:56.314Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png
+[2026-02-18T17:42:56.391Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png
+[2026-02-18T17:42:56.437Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png
+[2026-02-18T17:42:56.489Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569039.png
+[2026-02-18T17:42:56.543Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569039.png
+[2026-02-18T17:42:56.601Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569733.png
+[2026-02-18T17:42:56.602Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569733.png
+[2026-02-18T17:42:56.651Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570339.png
+[2026-02-18T17:42:56.748Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570339.png
+[2026-02-18T17:42:56.749Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570441.png
+[2026-02-18T17:42:56.877Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528771.png: Jimp.read is not a function
+[2026-02-18T17:42:56.881Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png: Jimp.read is not a function
+[2026-02-18T17:42:56.955Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528821.png: Jimp.read is not a function
+[2026-02-18T17:42:57.068Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527858.png: Jimp.read is not a function
+[2026-02-18T17:42:57.304Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528760.png: Jimp.read is not a function
+[2026-02-18T17:42:57.693Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528759.png: Jimp.read is not a function
+[2026-02-18T17:42:57.721Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528773.png: Jimp.read is not a function
+[2026-02-18T17:42:57.722Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528714.png: Jimp.read is not a function
+[2026-02-18T17:42:57.786Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528759.png: Jimp.read is not a function
+[2026-02-18T17:42:58.025Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528826.png: Jimp.read is not a function
+[2026-02-18T17:42:58.059Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527986.png: Jimp.read is not a function
+[2026-02-18T17:42:58.063Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528819.png: Jimp.read is not a function
+[2026-02-18T17:42:59.570Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570441.png
+[2026-02-18T17:43:00.215Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T17:43:00.391Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571202.png
+[2026-02-18T17:43:00.406Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571202.png
+[2026-02-18T17:43:00.589Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571204.png
+[2026-02-18T17:43:00.590Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571204.png
+[2026-02-18T17:43:00.670Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T17:43:00.671Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571459.png
+[2026-02-18T17:43:00.798Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571459.png
+[2026-02-18T17:43:00.805Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571490.png
+[2026-02-18T17:43:00.865Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571490.png
+[2026-02-18T17:43:00.956Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571582.png
+[2026-02-18T17:43:00.958Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571582.png
+[2026-02-18T17:43:00.996Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png
+[2026-02-18T17:43:00.997Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png
+[2026-02-18T17:43:00.998Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png
+[2026-02-18T17:43:00.999Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571649.png
+[2026-02-18T17:43:00.999Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571649.png
+[2026-02-18T17:43:01.000Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571650.png
+[2026-02-18T17:43:01.000Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571650.png
+[2026-02-18T17:43:01.009Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571799.png
+[2026-02-18T17:43:01.013Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571799.png
+[2026-02-18T17:43:01.057Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571801.png
+[2026-02-18T17:43:01.058Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571801.png
+[2026-02-18T17:43:01.058Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571992.png
+[2026-02-18T17:43:01.071Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571992.png
+[2026-02-18T17:43:01.392Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528709.png: Jimp.read is not a function
+[2026-02-18T17:43:01.580Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527858.png: Jimp.read is not a function
+[2026-02-18T17:43:01.581Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png: Jimp.read is not a function
+[2026-02-18T17:43:01.704Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527853.png: Jimp.read is not a function
+[2026-02-18T17:43:01.740Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531997.png: Jimp.read is not a function
+[2026-02-18T17:43:01.741Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528708.png: Jimp.read is not a function
+[2026-02-18T17:43:01.742Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528767.png: Jimp.read is not a function
+[2026-02-18T17:43:01.837Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528821.png: Jimp.read is not a function
+[2026-02-18T17:43:01.839Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528756.png: Jimp.read is not a function
+[2026-02-18T17:43:01.887Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527853.png: Jimp.read is not a function
+[2026-02-18T17:43:01.963Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527989.png: Jimp.read is not a function
+[2026-02-18T17:43:02.052Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527330.png: Jimp.read is not a function
+[2026-02-18T17:43:02.101Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528758.png: Jimp.read is not a function
+[2026-02-18T17:43:03.547Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577341.png
+[2026-02-18T17:43:04.233Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527978.png: Jimp.read is not a function
+[2026-02-18T17:43:04.234Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527988.png: Jimp.read is not a function
+[2026-02-18T17:43:04.271Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528716.png: Jimp.read is not a function
+[2026-02-18T17:43:04.272Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528824.png: Jimp.read is not a function
+[2026-02-18T17:43:04.273Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527342.png: Jimp.read is not a function
+[2026-02-18T17:43:04.305Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528764.png: Jimp.read is not a function
+[2026-02-18T17:43:04.306Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528756.png: Jimp.read is not a function
+[2026-02-18T17:43:04.307Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527334.png: Jimp.read is not a function
+[2026-02-18T17:43:04.307Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png: Jimp.read is not a function
+[2026-02-18T17:43:04.308Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png: Jimp.read is not a function
+[2026-02-18T17:43:04.310Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528714.png: Jimp.read is not a function
+[2026-02-18T17:43:04.312Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531999.png: Jimp.read is not a function
+[2026-02-18T17:43:04.341Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png: Jimp.read is not a function
+[2026-02-18T17:43:04.357Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527982.png: Jimp.read is not a function
+[2026-02-18T17:43:04.358Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436527986.png: Jimp.read is not a function
+[2026-02-18T17:43:04.359Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528822.png: Jimp.read is not a function
+[2026-02-18T17:43:07.012Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577341.png
+[2026-02-18T17:43:09.456Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577463.png
+[2026-02-18T17:43:09.734Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577463.png
+[2026-02-18T17:43:09.735Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578064.png
+[2026-02-18T17:43:09.735Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578064.png
+[2026-02-18T17:43:09.736Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578096.png
+[2026-02-18T17:43:09.737Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578096.png
+[2026-02-18T17:43:09.737Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578096.png
+[2026-02-18T17:43:09.738Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578225.png
+[2026-02-18T17:43:09.738Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578225.png
+[2026-02-18T17:43:09.738Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578246.png
+[2026-02-18T17:43:09.739Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578246.png
+[2026-02-18T17:43:09.739Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578246.png
+[2026-02-18T17:43:09.739Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578342.png
+[2026-02-18T17:43:09.740Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578342.png
+[2026-02-18T17:43:09.740Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578369.png
+[2026-02-18T17:43:09.740Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578369.png
+[2026-02-18T17:43:09.741Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578721.png
+[2026-02-18T17:43:09.741Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578721.png
+[2026-02-18T17:43:09.741Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578721.png
+[2026-02-18T17:43:09.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578934.png
+[2026-02-18T17:43:09.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578934.png
+[2026-02-18T17:43:09.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578938.png
+[2026-02-18T17:43:09.743Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578938.png
+[2026-02-18T17:43:09.743Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436579083.png
+[2026-02-18T17:43:09.744Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436579083.png
+[2026-02-18T17:43:09.744Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582192.png
+[2026-02-18T17:43:09.799Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582192.png
+[2026-02-18T17:43:09.800Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582285.png
+[2026-02-18T17:43:09.800Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582285.png
+[2026-02-18T17:43:09.801Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582285.png
+[2026-02-18T17:43:09.801Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582318.png
+[2026-02-18T17:43:09.802Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582318.png
+[2026-02-18T17:43:09.802Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582318.png
+[2026-02-18T17:43:09.803Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582335.png
+[2026-02-18T17:43:09.896Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582335.png
+[2026-02-18T17:43:09.897Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582384.png
+[2026-02-18T17:43:09.898Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582384.png
+[2026-02-18T17:43:09.899Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582455.png
+[2026-02-18T17:43:09.899Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582455.png
+[2026-02-18T17:43:09.900Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582474.png
+[2026-02-18T17:43:09.903Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582474.png
+[2026-02-18T17:43:09.903Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582596.png
+[2026-02-18T17:43:09.904Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582596.png
+[2026-02-18T17:43:09.905Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582596.png
+[2026-02-18T17:43:09.905Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582719.png
+[2026-02-18T17:43:09.905Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582719.png
+[2026-02-18T17:43:09.906Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582807.png
+[2026-02-18T17:43:09.906Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582807.png
+[2026-02-18T17:43:12.816Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531994.png: Jimp.read is not a function
+[2026-02-18T17:43:17.989Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535307.png: Jimp.read is not a function
+[2026-02-18T17:43:18.780Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531999.png: Jimp.read is not a function
+[2026-02-18T17:43:25.034Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583635.png
+[2026-02-18T17:43:26.189Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583635.png
+[2026-02-18T17:43:26.190Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583656.png
+[2026-02-18T17:43:26.191Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583656.png
+[2026-02-18T17:43:26.262Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583656.png
+[2026-02-18T17:43:26.342Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583665.png
+[2026-02-18T17:43:26.343Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583665.png
+[2026-02-18T17:43:26.344Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583735.png
+[2026-02-18T17:43:26.344Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583735.png
+[2026-02-18T17:43:26.345Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583735.png
+[2026-02-18T17:43:26.349Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583745.png
+[2026-02-18T17:43:26.350Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583745.png
+[2026-02-18T17:43:26.350Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583745.png
+[2026-02-18T17:43:26.351Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583772.png
+[2026-02-18T17:43:26.355Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583772.png
+[2026-02-18T17:43:26.355Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583772.png
+[2026-02-18T17:43:26.485Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583774.png
+[2026-02-18T17:43:26.486Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583774.png
+[2026-02-18T17:43:26.491Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583798.png
+[2026-02-18T17:43:26.492Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583798.png
+[2026-02-18T17:43:26.492Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583798.png
+[2026-02-18T17:43:26.493Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583951.png
+[2026-02-18T17:43:26.493Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583951.png
+[2026-02-18T17:43:26.498Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583956.png
+[2026-02-18T17:43:26.498Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583956.png
+[2026-02-18T17:43:26.499Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583958.png
+[2026-02-18T17:43:26.499Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583958.png
+[2026-02-18T17:43:26.500Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583958.png
+[2026-02-18T17:43:26.500Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583962.png
+[2026-02-18T17:43:26.501Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583962.png
+[2026-02-18T17:43:26.505Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584001.png
+[2026-02-18T17:43:26.506Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584001.png
+[2026-02-18T17:43:26.506Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584001.png
+[2026-02-18T17:43:26.506Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584057.png
+[2026-02-18T17:43:26.507Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584057.png
+[2026-02-18T17:43:26.512Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584057.png
+[2026-02-18T17:43:26.512Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584096.png
+[2026-02-18T17:43:26.512Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584096.png
+[2026-02-18T17:43:26.513Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584205.png
+[2026-02-18T17:43:26.513Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584205.png
+[2026-02-18T17:43:26.521Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584205.png
+[2026-02-18T17:43:26.522Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584393.png
+[2026-02-18T17:43:26.563Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584393.png
+[2026-02-18T17:43:26.621Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584393.png
+[2026-02-18T17:43:27.300Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535662.png: Jimp.read is not a function
+[2026-02-18T17:43:27.301Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532084.png: Jimp.read is not a function
+[2026-02-18T17:43:28.614Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531636.png: Jimp.read is not a function
+[2026-02-18T17:43:28.620Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436534723.png: Jimp.read is not a function
+[2026-02-18T17:43:28.621Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528831.png: Jimp.read is not a function
+[2026-02-18T17:43:30.655Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528769.png: Jimp.read is not a function
+[2026-02-18T17:43:30.656Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531992.png: Jimp.read is not a function
+[2026-02-18T17:43:30.657Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528773.png: Jimp.read is not a function
+[2026-02-18T17:43:30.704Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531992.png: Jimp.read is not a function
+[2026-02-18T17:43:31.779Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532086.png: Jimp.read is not a function
+[2026-02-18T17:43:31.881Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535308.png: Jimp.read is not a function
+[2026-02-18T17:43:32.324Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535676.png: Jimp.read is not a function
+[2026-02-18T17:43:32.326Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535149.png: Jimp.read is not a function
+[2026-02-18T17:43:33.086Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531994.png: Jimp.read is not a function
+[2026-02-18T17:43:33.600Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436532084.png: Jimp.read is not a function
+[2026-02-18T17:43:34.447Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535149.png: Jimp.read is not a function
+[2026-02-18T17:43:34.889Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535683.png: Jimp.read is not a function
+[2026-02-18T17:43:39.972Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535132.png: Jimp.read is not a function
+[2026-02-18T17:43:41.730Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535677.png: Jimp.read is not a function
+[2026-02-18T17:43:41.732Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436528827.png: Jimp.read is not a function
+[2026-02-18T17:43:41.732Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png: Jimp.read is not a function
+[2026-02-18T17:43:41.733Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535667.png: Jimp.read is not a function
+[2026-02-18T17:43:42.052Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535277.png: Jimp.read is not a function
+[2026-02-18T17:43:42.054Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536400.png: Jimp.read is not a function
+[2026-02-18T17:43:42.055Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png: Jimp.read is not a function
+[2026-02-18T17:43:45.468Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544139.png: Jimp.read is not a function
+[2026-02-18T17:43:45.471Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png: Jimp.read is not a function
+[2026-02-18T17:43:45.477Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436543978.png: Jimp.read is not a function
+[2026-02-18T17:43:45.479Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png: Jimp.read is not a function
+[2026-02-18T17:43:45.480Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436534723.png: Jimp.read is not a function
+[2026-02-18T17:43:45.480Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536402.png: Jimp.read is not a function
+[2026-02-18T17:43:45.481Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546804.png: Jimp.read is not a function
+[2026-02-18T17:43:45.484Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png: Jimp.read is not a function
+[2026-02-18T17:43:45.486Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535307.png: Jimp.read is not a function
+[2026-02-18T17:43:45.488Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436531997.png: Jimp.read is not a function
+[2026-02-18T17:43:45.488Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png: Jimp.read is not a function
+[2026-02-18T17:43:45.489Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png: Jimp.read is not a function
+[2026-02-18T17:43:45.600Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png: Jimp.read is not a function
+[2026-02-18T17:43:45.601Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546889.png: Jimp.read is not a function
+[2026-02-18T17:43:47.094Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546683.png: Jimp.read is not a function
+[2026-02-18T17:43:47.096Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png: Jimp.read is not a function
+[2026-02-18T17:43:47.368Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png: Jimp.read is not a function
+[2026-02-18T17:43:47.371Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535152.png: Jimp.read is not a function
+[2026-02-18T17:43:47.403Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544287.png: Jimp.read is not a function
+[2026-02-18T17:43:47.429Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png: Jimp.read is not a function
+[2026-02-18T17:43:48.941Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png: Jimp.read is not a function
+[2026-02-18T17:43:48.942Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png: Jimp.read is not a function
+[2026-02-18T17:43:48.943Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536053.png: Jimp.read is not a function
+[2026-02-18T17:43:48.944Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png: Jimp.read is not a function
+[2026-02-18T17:43:48.947Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536053.png: Jimp.read is not a function
+[2026-02-18T17:43:50.069Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png: Jimp.read is not a function
+[2026-02-18T17:43:50.106Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553302.png: Jimp.read is not a function
+[2026-02-18T17:43:50.126Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547754.png: Jimp.read is not a function
+[2026-02-18T17:43:50.137Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547754.png: Jimp.read is not a function
+[2026-02-18T17:43:50.138Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553502.png: Jimp.read is not a function
+[2026-02-18T17:43:50.138Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535308.png: Jimp.read is not a function
+[2026-02-18T17:43:50.139Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553382.png: Jimp.read is not a function
+[2026-02-18T17:43:50.139Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553382.png: Jimp.read is not a function
+[2026-02-18T17:43:50.144Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547569.png: Jimp.read is not a function
+[2026-02-18T17:43:50.146Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535662.png: Jimp.read is not a function
+[2026-02-18T17:43:50.148Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535677.png: Jimp.read is not a function
+[2026-02-18T17:43:50.149Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544287.png: Jimp.read is not a function
+[2026-02-18T17:43:50.304Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436543978.png: Jimp.read is not a function
+[2026-02-18T17:43:54.159Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png: Jimp.read is not a function
+[2026-02-18T17:43:57.623Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png: Jimp.read is not a function
+[2026-02-18T17:43:59.264Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554160.png: Jimp.read is not a function
+[2026-02-18T17:44:26.477Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png: Jimp.read is not a function
+[2026-02-18T17:44:26.762Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535924.png: Jimp.read is not a function
+[2026-02-18T17:44:26.788Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553534.png: Jimp.read is not a function
+[2026-02-18T17:44:26.843Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553502.png: Jimp.read is not a function
+[2026-02-18T17:44:28.137Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png: Jimp.read is not a function
+[2026-02-18T17:44:28.533Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555856.png: Jimp.read is not a function
+[2026-02-18T17:44:28.590Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569733.png: Jimp.read is not a function
+[2026-02-18T17:44:28.594Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png: Jimp.read is not a function
+[2026-02-18T17:44:28.685Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555539.png: Jimp.read is not a function
+[2026-02-18T17:44:28.728Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png: Jimp.read is not a function
+[2026-02-18T17:44:28.835Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png: Jimp.read is not a function
+[2026-02-18T17:44:28.865Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571650.png: Jimp.read is not a function
+[2026-02-18T17:44:28.920Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png: Jimp.read is not a function
+[2026-02-18T17:44:28.937Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557067.png: Jimp.read is not a function
+[2026-02-18T17:44:28.963Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png: Jimp.read is not a function
+[2026-02-18T17:44:28.964Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553951.png: Jimp.read is not a function
+[2026-02-18T17:44:29.111Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555738.png: Jimp.read is not a function
+[2026-02-18T17:44:29.133Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557067.png: Jimp.read is not a function
+[2026-02-18T17:44:29.134Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555258.png: Jimp.read is not a function
+[2026-02-18T17:44:29.227Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png: Jimp.read is not a function
+[2026-02-18T17:44:29.352Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556059.png: Jimp.read is not a function
+[2026-02-18T17:44:29.354Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571650.png: Jimp.read is not a function
+[2026-02-18T17:44:29.398Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535667.png: Jimp.read is not a function
+[2026-02-18T17:44:29.748Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557031.png: Jimp.read is not a function
+[2026-02-18T17:44:29.750Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555539.png: Jimp.read is not a function
+[2026-02-18T17:44:29.753Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png: Jimp.read is not a function
+[2026-02-18T17:44:29.757Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571992.png: Jimp.read is not a function
+[2026-02-18T17:44:29.768Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571582.png: Jimp.read is not a function
+[2026-02-18T17:44:29.769Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571459.png: Jimp.read is not a function
+[2026-02-18T17:44:29.775Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png: Jimp.read is not a function
+[2026-02-18T17:44:48.813Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554746.png: Jimp.read is not a function
+[2026-02-18T17:44:48.826Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555005.png: Jimp.read is not a function
+[2026-02-18T17:44:48.827Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png: Jimp.read is not a function
+[2026-02-18T17:44:48.832Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571582.png: Jimp.read is not a function
+[2026-02-18T17:44:48.844Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571649.png: Jimp.read is not a function
+[2026-02-18T17:44:48.846Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571202.png: Jimp.read is not a function
+[2026-02-18T17:44:48.847Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436560717.png: Jimp.read is not a function
+[2026-02-18T17:44:48.848Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570441.png: Jimp.read is not a function
+[2026-02-18T17:44:48.849Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571459.png: Jimp.read is not a function
+[2026-02-18T17:44:48.851Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571801.png: Jimp.read is not a function
+[2026-02-18T17:44:48.852Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571799.png: Jimp.read is not a function
+[2026-02-18T17:44:48.852Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png: Jimp.read is not a function
+[2026-02-18T17:44:48.853Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556850.png: Jimp.read is not a function
+[2026-02-18T17:44:48.856Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570441.png: Jimp.read is not a function
+[2026-02-18T17:44:48.859Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556850.png: Jimp.read is not a function
+[2026-02-18T17:44:48.860Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571647.png: Jimp.read is not a function
+[2026-02-18T17:44:48.861Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571204.png: Jimp.read is not a function
+[2026-02-18T17:44:48.863Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571490.png: Jimp.read is not a function
+[2026-02-18T17:44:48.865Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571799.png: Jimp.read is not a function
+[2026-02-18T17:44:48.865Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png: Jimp.read is not a function
+[2026-02-18T17:44:48.866Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556760.png: Jimp.read is not a function
+[2026-02-18T17:44:48.867Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536051.png: Jimp.read is not a function
+[2026-02-18T17:44:48.867Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555005.png: Jimp.read is not a function
+[2026-02-18T17:44:48.869Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571204.png: Jimp.read is not a function
+[2026-02-18T17:44:48.870Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535683.png: Jimp.read is not a function
+[2026-02-18T17:44:48.872Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png: Jimp.read is not a function
+[2026-02-18T17:44:48.873Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535676.png: Jimp.read is not a function
+[2026-02-18T17:44:48.875Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569039.png: Jimp.read is not a function
+[2026-02-18T17:44:48.876Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png: Jimp.read is not a function
+[2026-02-18T17:44:48.880Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536051.png: Jimp.read is not a function
+[2026-02-18T17:44:48.940Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436557031.png: Jimp.read is not a function
+[2026-02-18T17:44:48.945Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556067.png: Jimp.read is not a function
+[2026-02-18T17:44:48.946Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556059.png: Jimp.read is not a function
+[2026-02-18T17:44:49.000Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png: Jimp.read is not a function
+[2026-02-18T17:44:49.002Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535132.png: Jimp.read is not a function
+[2026-02-18T17:44:49.566Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555856.png: Jimp.read is not a function
+[2026-02-18T17:44:49.569Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555900.png: Jimp.read is not a function
+[2026-02-18T17:44:49.597Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546683.png: Jimp.read is not a function
+[2026-02-18T17:44:49.614Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555851.png: Jimp.read is not a function
+[2026-02-18T17:44:51.013Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436560717.png: Jimp.read is not a function
+[2026-02-18T17:44:51.014Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536087.png: Jimp.read is not a function
+[2026-02-18T17:44:51.015Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547398.png: Jimp.read is not a function
+[2026-02-18T17:44:51.016Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555851.png: Jimp.read is not a function
+[2026-02-18T17:44:51.017Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png: Jimp.read is not a function
+[2026-02-18T17:44:51.018Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555258.png: Jimp.read is not a function
+[2026-02-18T17:44:51.018Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554160.png: Jimp.read is not a function
+[2026-02-18T17:44:51.019Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536087.png: Jimp.read is not a function
+[2026-02-18T17:44:51.019Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436568916.png: Jimp.read is not a function
+[2026-02-18T17:44:51.019Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556968.png: Jimp.read is not a function
+[2026-02-18T17:44:51.020Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554746.png: Jimp.read is not a function
+[2026-02-18T17:44:51.042Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554618.png: Jimp.read is not a function
+[2026-02-18T17:44:51.077Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570339.png: Jimp.read is not a function
+[2026-02-18T17:44:51.094Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535911.png: Jimp.read is not a function
+[2026-02-18T17:44:51.149Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553467.png: Jimp.read is not a function
+[2026-02-18T17:44:51.197Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553302.png: Jimp.read is not a function
+[2026-02-18T17:44:51.239Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535277.png: Jimp.read is not a function
+[2026-02-18T17:44:51.281Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png: Jimp.read is not a function
+[2026-02-18T17:44:51.478Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436535922.png: Jimp.read is not a function
+[2026-02-18T17:44:51.499Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569039.png: Jimp.read is not a function
+[2026-02-18T17:44:51.931Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556760.png: Jimp.read is not a function
+[2026-02-18T17:44:51.932Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553951.png: Jimp.read is not a function
+[2026-02-18T17:44:51.934Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553534.png: Jimp.read is not a function
+[2026-02-18T17:44:51.935Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436555900.png: Jimp.read is not a function
+[2026-02-18T17:44:51.936Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436556067.png: Jimp.read is not a function
+[2026-02-18T17:44:51.939Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png: Jimp.read is not a function
+[2026-02-18T17:44:51.940Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436569733.png: Jimp.read is not a function
+[2026-02-18T17:44:51.983Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436544139.png: Jimp.read is not a function
+[2026-02-18T17:44:52.046Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536400.png: Jimp.read is not a function
+[2026-02-18T17:44:52.069Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547556.png: Jimp.read is not a function
+[2026-02-18T17:44:52.694Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571202.png: Jimp.read is not a function
+[2026-02-18T17:44:52.695Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png: Jimp.read is not a function
+[2026-02-18T17:44:52.696Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436536402.png: Jimp.read is not a function
+[2026-02-18T17:44:52.698Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436552923.png: Jimp.read is not a function
+[2026-02-18T17:44:52.699Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png: Jimp.read is not a function
+[2026-02-18T17:44:52.701Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546607.png: Jimp.read is not a function
+[2026-02-18T17:44:52.705Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547141.png: Jimp.read is not a function
+[2026-02-18T17:44:52.707Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547569.png: Jimp.read is not a function
+[2026-02-18T17:44:52.711Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547141.png: Jimp.read is not a function
+[2026-02-18T17:44:52.748Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546889.png: Jimp.read is not a function
+[2026-02-18T17:44:52.838Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436552923.png: Jimp.read is not a function
+[2026-02-18T17:44:52.860Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png: Jimp.read is not a function
+[2026-02-18T17:44:53.408Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546656.png: Jimp.read is not a function
+[2026-02-18T17:44:53.409Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436547549.png: Jimp.read is not a function
+[2026-02-18T17:44:53.410Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436553759.png: Jimp.read is not a function
+[2026-02-18T17:44:53.411Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436546804.png: Jimp.read is not a function
+[2026-02-18T17:44:53.412Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578938.png: Jimp.read is not a function
+[2026-02-18T17:44:53.414Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583665.png: Jimp.read is not a function
+[2026-02-18T17:44:53.414Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436554211.png: Jimp.read is not a function
+[2026-02-18T17:44:53.548Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584393.png: Jimp.read is not a function
+[2026-02-18T17:44:53.549Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436570339.png: Jimp.read is not a function
+[2026-02-18T17:44:53.601Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584001.png: Jimp.read is not a function
+[2026-02-18T17:44:54.060Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583956.png: Jimp.read is not a function
+[2026-02-18T17:44:54.062Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577341.png: Jimp.read is not a function
+[2026-02-18T17:44:54.441Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578225.png: Jimp.read is not a function
+[2026-02-18T17:44:54.443Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583745.png: Jimp.read is not a function
+[2026-02-18T17:44:54.444Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571490.png: Jimp.read is not a function
+[2026-02-18T17:44:54.491Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571649.png: Jimp.read is not a function
+[2026-02-18T17:44:54.492Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436550225.png: Jimp.read is not a function
+[2026-02-18T17:44:54.493Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583962.png: Jimp.read is not a function
+[2026-02-18T17:44:55.668Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571992.png: Jimp.read is not a function
+[2026-02-18T17:44:55.751Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436577463.png: Jimp.read is not a function
+[2026-02-18T17:44:55.754Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583635.png: Jimp.read is not a function
+[2026-02-18T17:44:55.802Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436571801.png: Jimp.read is not a function
+[2026-02-18T17:44:55.898Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582285.png: Jimp.read is not a function
+[2026-02-18T17:44:56.946Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583958.png: Jimp.read is not a function
+[2026-02-18T17:44:56.947Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584205.png: Jimp.read is not a function
+[2026-02-18T17:44:58.966Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578934.png: Jimp.read is not a function
+[2026-02-18T17:44:58.967Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436578096.png: Jimp.read is not a function
+[2026-02-18T17:44:59.227Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436584096.png: Jimp.read is not a function
+[2026-02-18T17:44:59.462Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436582719.png: Jimp.read is not a function
+[2026-02-18T17:44:59.825Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583962.png: Jimp.read is not a function
+[2026-02-18T17:44:59.825Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436583798.png: Jimp.read is not a function
+[2026-02-18T19:21:49.212Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T19:21:54.942Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png: Jimp is not defined
+[2026-02-18T19:21:54.945Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T19:21:55.726Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png: Jimp is not defined
+[2026-02-18T19:21:55.729Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T19:21:56.273Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png: Jimp is not defined
+[2026-02-18T19:21:56.282Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607923.png
+[2026-02-18T19:21:56.966Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607923.png: Jimp is not defined
+[2026-02-18T19:21:56.968Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607952.png
+[2026-02-18T19:21:57.440Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607952.png: Jimp is not defined
+[2026-02-18T19:21:57.443Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608040.png
+[2026-02-18T19:21:57.867Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608040.png: Jimp is not defined
+[2026-02-18T19:21:57.868Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608121.png
+[2026-02-18T19:21:58.298Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608121.png: Jimp is not defined
+[2026-02-18T19:21:58.299Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608217.png
+[2026-02-18T19:21:58.745Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608217.png: Jimp is not defined
+[2026-02-18T19:21:58.746Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608235.png
+[2026-02-18T19:21:59.162Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608235.png: Jimp is not defined
+[2026-02-18T19:21:59.163Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608246.png
+[2026-02-18T19:21:59.607Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608246.png: Jimp is not defined
+[2026-02-18T19:21:59.609Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608279.png
+[2026-02-18T19:22:00.078Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608279.png: Jimp is not defined
+[2026-02-18T19:22:00.079Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608287.png
+[2026-02-18T19:22:01.017Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608287.png: Jimp is not defined
+[2026-02-18T19:22:01.018Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608380.png
+[2026-02-18T19:22:02.431Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608380.png: Jimp is not defined
+[2026-02-18T19:22:02.432Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608460.png
+[2026-02-18T19:22:03.248Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608460.png: Jimp is not defined
+[2026-02-18T19:22:03.249Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608479.png
+[2026-02-18T19:22:03.660Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608479.png: Jimp is not defined
+[2026-02-18T19:22:03.661Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608537.png
+[2026-02-18T19:22:04.070Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608537.png: Jimp is not defined
+[2026-02-18T19:22:04.072Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608589.png
+[2026-02-18T19:22:04.540Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608589.png: Jimp is not defined
+[2026-02-18T19:22:04.541Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608594.png
+[2026-02-18T19:22:04.944Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608594.png: Jimp is not defined
+[2026-02-18T19:22:04.945Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609371.png
+[2026-02-18T19:22:05.352Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609371.png: Jimp is not defined
+[2026-02-18T19:22:05.354Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609381.png
+[2026-02-18T19:22:05.740Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609381.png: Jimp is not defined
+[2026-02-18T19:22:05.742Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609476.png
+[2026-02-18T19:22:06.155Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609476.png: Jimp is not defined
+[2026-02-18T19:22:06.156Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609513.png
+[2026-02-18T19:22:06.547Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609513.png: Jimp is not defined
+[2026-02-18T19:22:06.548Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609595.png
+[2026-02-18T19:22:06.953Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609595.png: Jimp is not defined
+[2026-02-18T19:22:06.954Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609630.png
+[2026-02-18T19:22:07.341Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609630.png: Jimp is not defined
+[2026-02-18T19:22:07.342Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609713.png
+[2026-02-18T19:22:07.744Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609713.png: Jimp is not defined
+[2026-02-18T19:22:07.745Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609860.png
+[2026-02-18T19:22:08.178Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609860.png: Jimp is not defined
+[2026-02-18T19:22:08.179Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609878.png
+[2026-02-18T19:22:08.576Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609878.png: Jimp is not defined
+[2026-02-18T19:22:08.577Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609952.png
+[2026-02-18T19:22:09.013Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609952.png: Jimp is not defined
+[2026-02-18T19:22:09.016Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610006.png
+[2026-02-18T19:22:09.547Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610006.png: Jimp is not defined
+[2026-02-18T19:22:09.549Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610187.png
+[2026-02-18T19:22:10.045Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610187.png: Jimp is not defined
+[2026-02-18T19:22:10.048Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610298.png
+[2026-02-18T19:22:10.496Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610298.png: Jimp is not defined
+[2026-02-18T19:22:10.497Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610423.png
+[2026-02-18T19:22:10.915Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610423.png: Jimp is not defined
+[2026-02-18T19:22:10.917Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610451.png
+[2026-02-18T19:22:11.360Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610451.png: Jimp is not defined
+[2026-02-18T19:22:11.362Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610480.png
+[2026-02-18T19:22:11.852Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610480.png: Jimp is not defined
+[2026-02-18T19:22:11.859Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610533.png
+[2026-02-18T19:22:12.312Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610533.png: Jimp is not defined
+[2026-02-18T19:22:12.313Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610582.png
+[2026-02-18T19:22:12.763Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610582.png: Jimp is not defined
+[2026-02-18T19:22:12.765Z] Monitorando pasta /prints
+[2026-02-18T19:28:10.731Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_1.png
+[2026-02-18T19:28:11.513Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771442890748.png
+[2026-02-18T19:28:11.536Z] Falha ao processar C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771442890748.png: Input file is missing: C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771442890748.png
+[2026-02-18T19:28:11.700Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1.json com 0 itens
+[2026-02-18T19:28:11.701Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_2.png
+[2026-02-18T19:28:12.433Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\2.json com 0 itens
+[2026-02-18T19:28:12.434Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\list_part_3.png
+[2026-02-18T19:28:13.036Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\3.json com 0 itens
+[2026-02-18T19:28:13.037Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607923.png
+[2026-02-18T19:28:13.557Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436607923.json com 0 itens
+[2026-02-18T19:28:13.558Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436607952.png
+[2026-02-18T19:28:14.058Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436607952.json com 0 itens
+[2026-02-18T19:28:14.059Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608040.png
+[2026-02-18T19:28:14.574Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608040.json com 0 itens
+[2026-02-18T19:28:14.575Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608121.png
+[2026-02-18T19:28:15.107Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608121.json com 0 itens
+[2026-02-18T19:28:15.108Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608217.png
+[2026-02-18T19:28:15.642Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608217.json com 0 itens
+[2026-02-18T19:28:15.643Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608235.png
+[2026-02-18T19:28:16.142Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608235.json com 0 itens
+[2026-02-18T19:28:16.142Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608246.png
+[2026-02-18T19:28:16.644Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608246.json com 0 itens
+[2026-02-18T19:28:16.645Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608279.png
+[2026-02-18T19:28:17.396Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608279.json com 0 itens
+[2026-02-18T19:28:17.397Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608287.png
+[2026-02-18T19:28:18.138Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608287.json com 0 itens
+[2026-02-18T19:28:18.139Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608380.png
+[2026-02-18T19:28:18.763Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608380.json com 0 itens
+[2026-02-18T19:28:18.764Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608460.png
+[2026-02-18T19:28:19.294Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608460.json com 0 itens
+[2026-02-18T19:28:19.295Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608479.png
+[2026-02-18T19:28:19.810Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608479.json com 0 itens
+[2026-02-18T19:28:19.811Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608537.png
+[2026-02-18T19:28:20.330Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608537.json com 0 itens
+[2026-02-18T19:28:20.330Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608589.png
+[2026-02-18T19:28:20.832Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608589.json com 0 itens
+[2026-02-18T19:28:20.834Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436608594.png
+[2026-02-18T19:28:21.358Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436608594.json com 0 itens
+[2026-02-18T19:28:21.359Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609371.png
+[2026-02-18T19:28:21.888Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609371.json com 0 itens
+[2026-02-18T19:28:21.888Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609381.png
+[2026-02-18T19:28:22.399Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609381.json com 0 itens
+[2026-02-18T19:28:22.400Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609476.png
+[2026-02-18T19:28:22.929Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609476.json com 0 itens
+[2026-02-18T19:28:22.930Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609513.png
+[2026-02-18T19:28:23.481Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609513.json com 0 itens
+[2026-02-18T19:28:23.482Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609595.png
+[2026-02-18T19:28:23.978Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609595.json com 0 itens
+[2026-02-18T19:28:23.979Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609630.png
+[2026-02-18T19:28:24.467Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609630.json com 0 itens
+[2026-02-18T19:28:24.468Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609713.png
+[2026-02-18T19:28:24.970Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609713.json com 0 itens
+[2026-02-18T19:28:24.971Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609860.png
+[2026-02-18T19:28:25.508Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609860.json com 0 itens
+[2026-02-18T19:28:25.508Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609878.png
+[2026-02-18T19:28:26.008Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609878.json com 0 itens
+[2026-02-18T19:28:26.008Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436609952.png
+[2026-02-18T19:28:26.494Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436609952.json com 0 itens
+[2026-02-18T19:28:26.495Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610006.png
+[2026-02-18T19:28:26.993Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610006.json com 0 itens
+[2026-02-18T19:28:26.994Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610187.png
+[2026-02-18T19:28:27.493Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610187.json com 0 itens
+[2026-02-18T19:28:27.494Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610298.png
+[2026-02-18T19:28:28.000Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610298.json com 0 itens
+[2026-02-18T19:28:28.001Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610423.png
+[2026-02-18T19:28:28.493Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610423.json com 0 itens
+[2026-02-18T19:28:28.494Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610451.png
+[2026-02-18T19:28:28.982Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610451.json com 0 itens
+[2026-02-18T19:28:28.984Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610480.png
+[2026-02-18T19:28:29.537Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610480.json com 0 itens
+[2026-02-18T19:28:29.538Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610533.png
+[2026-02-18T19:28:30.042Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610533.json com 0 itens
+[2026-02-18T19:28:30.042Z] Processando C:\src\bot_dimasa\bot_dimasa\prints\tmp_1771436610582.png
+[2026-02-18T19:28:30.540Z] Gerado C:\src\bot_dimasa\bot_dimasa\output\1771436610582.json com 0 itens
+[2026-02-18T19:28:30.542Z] Monitorando pasta /prints
+[2026-02-21T18:11:30.301Z] Monitorando pasta /prints
+[2026-02-21T18:22:22.164Z] Monitorando pasta /prints
+[2026-02-23T04:03:14.419Z] Monitorando pasta /prints
+[2026-02-23T04:05:50.342Z] Monitorando pasta /prints
+[2026-02-23T04:11:03.905Z] Monitorando pasta /prints
+[2026-02-23T04:28:48.792Z] Monitorando pasta /prints
+[2026-02-23T04:30:50.758Z] Monitorando pasta /prints
+[2026-02-23T12:47:33.262Z] Monitorando pasta /prints
+[2026-02-23T12:51:25.667Z] Monitorando pasta /prints
+[2026-02-23T12:54:20.494Z] Monitorando pasta /prints
+[2026-02-23T12:57:57.480Z] Monitorando pasta /prints
+[2026-02-23T13:00:31.863Z] Monitorando pasta /prints
+[2026-02-23T13:04:38.839Z] Monitorando pasta /prints
+[2026-02-23T13:07:35.977Z] Monitorando pasta /prints
+[2026-02-23T13:15:32.628Z] Monitorando pasta /prints
+[2026-02-23T13:17:38.462Z] Monitorando pasta /prints
+[2026-02-23T13:23:49.496Z] Monitorando pasta /prints
+[2026-02-23T13:35:27.044Z] Monitorando pasta /prints
+[2026-02-23T13:38:37.991Z] Monitorando pasta /prints
+[2026-02-23T13:40:08.972Z] Monitorando pasta /prints
+[2026-02-23T13:44:04.934Z] Monitorando pasta /prints
+[2026-02-23T13:53:29.566Z] Monitorando pasta /prints
+[2026-02-23T14:00:06.354Z] Monitorando pasta /prints
+[2026-02-23T14:06:58.714Z] Monitorando pasta /prints
+[2026-02-23T14:10:53.473Z] Monitorando pasta /prints
+[2026-02-23T14:13:54.159Z] Monitorando pasta /prints
+[2026-02-23T14:15:47.403Z] Monitorando pasta /prints
+[2026-02-23T14:18:57.674Z] Monitorando pasta /prints
+[2026-02-23T14:22:09.340Z] Monitorando pasta /prints
+[2026-02-23T14:25:34.045Z] Monitorando pasta /prints
+[2026-02-23T14:33:52.980Z] Monitorando pasta /prints
+[2026-02-23T14:39:20.687Z] Monitorando pasta /prints
+[2026-02-23T14:51:20.344Z] Monitorando pasta /prints
+[2026-02-23T14:54:49.984Z] Monitorando pasta /prints
+[2026-02-23T14:58:23.055Z] Monitorando pasta /prints
+[2026-02-23T15:14:49.693Z] Monitorando pasta /prints
+[2026-02-23T16:04:21.002Z] Monitorando pasta /prints
+[2026-02-23T16:06:25.333Z] Monitorando pasta /prints
+[2026-02-23T16:31:29.834Z] Monitorando pasta /prints
+[2026-02-23T16:36:10.921Z] Monitorando pasta /prints
+[2026-02-23T16:39:27.511Z] Monitorando pasta /prints
+[2026-02-23T16:49:53.456Z] Monitorando pasta /prints
+[2026-02-23T16:53:05.266Z] Monitorando pasta /prints
+[2026-02-23T16:57:39.411Z] Monitorando pasta /prints
+[2026-02-23T16:58:13.936Z] Monitorando pasta /prints
+[2026-02-23T17:18:40.881Z] Monitorando pasta /prints
+[2026-02-23T17:45:37.479Z] Monitorando pasta /prints
+[2026-02-23T17:52:09.132Z] Monitorando pasta /prints
+[2026-02-23T18:36:57.019Z] Monitorando pasta /prints
+[2026-02-23T18:39:57.238Z] Monitorando pasta /prints

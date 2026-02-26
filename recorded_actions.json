@@ -1,173 +1,20 @@
 {
   "metadata": {
-    "saved_at": "2026-02-16T23:38:53.741Z",
-    "total_events": 19,
+    "saved_at": "2026-02-23T16:51:43.190Z",
+    "total_events": 1,
     "total_bot_steps_setup": 0,
     "total_bot_steps_loop": 0,
-    "total_user_events": 19
+    "total_user_events": 1
   },
   "setup_actions": [],
   "loop_actions": [],
   "user_events": [
     {
       "kind": "user_event",
-      "type": "double_click",
-      "x": 1310,
-      "y": 798,
-      "timestamp": 1771285034435
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "a",
-      "ctrlKey": true,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285055251,
-      "description": "Tecla: Ctrl+a"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "Delete",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285061759,
-      "description": "Tecla: Delete"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "2",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285068071,
-      "description": "Tecla: 2"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "0",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285068571,
-      "description": "Tecla: 0"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "6",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285072491,
-      "description": "Tecla: 6"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "2",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285072779,
-      "description": "Tecla: 2"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "3",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285074691,
-      "description": "Tecla: 3"
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "4",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285075531,
-      "description": "Tecla: 4"
-    },
-    {
-      "kind": "user_event",
-      "type": "double_click",
-      "x": 717,
-      "y": 494,
-      "timestamp": 1771285088807
-    },
-    {
-      "kind": "user_event",
       "type": "click",
-      "x": 1174,
-      "y": 436,
-      "timestamp": 1771285108607
-    },
-    {
-      "kind": "user_event",
-      "type": "double_click",
-      "x": 1174,
-      "y": 436,
-      "timestamp": 1771285108769
-    },
-    {
-      "kind": "user_event",
-      "type": "click",
-      "x": 971,
-      "y": 337,
-      "timestamp": 1771285117087
-    },
-    {
-      "kind": "user_event",
-      "type": "click",
-      "x": 1324,
-      "y": 332,
-      "timestamp": 1771285121939
-    },
-    {
-      "kind": "user_event",
-      "type": "click",
-      "x": 1363,
-      "y": 311,
-      "timestamp": 1771285123745
-    },
-    {
-      "kind": "user_event",
-      "type": "click",
-      "x": 1009,
-      "y": 573,
-      "timestamp": 1771285125281
-    },
-    {
-      "kind": "user_event",
-      "type": "click",
-      "x": 1300,
-      "y": 800,
-      "timestamp": 1771285129021
-    },
-    {
-      "kind": "user_event",
-      "type": "double_click",
-      "x": 1300,
-      "y": 800,
-      "timestamp": 1771285129157
-    },
-    {
-      "kind": "user_event",
-      "type": "keypress",
-      "key": "Delete",
-      "ctrlKey": false,
-      "altKey": false,
-      "shiftKey": false,
-      "timestamp": 1771285130846,
-      "description": "Tecla: Delete"
+      "x": 640,
+      "y": 300,
+      "timestamp": 1771865498577
     }
   ]
 }

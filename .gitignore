@@ -9,13 +9,12 @@ debug_*.png
 processing_report.json
 execution.log
 debug_log.txt
+*.log
 
 # OCR prints and results
-prints/*.png
-prints/test_ocr_results.json
-prints/found_text.txt
-prints/all_invoices_cumulative.txt
-prints/ocr_result.txt
+prints/
+output/
+files/
 
 # Generated invoices data
 invoice_*.json

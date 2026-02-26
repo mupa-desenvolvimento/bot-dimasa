@@ -116,6 +116,247 @@ class VisionBot {
             }
         });
 
+        await safeExpose('control_select_section', (section) => {
+            if (!this.currentCoordsObject) return;
+            if (section === 'setup') {
+                this.currentLoopSteps = this.currentCoordsObject.setup_steps || [];
+                this.currentSection = 'setup';
+                this.updateOverlay(0, this.currentLoopSteps, { __phase: 'setup', __index: 0 }).catch(() => {});
+            } else {
+                this.currentLoopSteps = this.currentCoordsObject.invoice_loop_steps || [];
+                this.currentSection = 'loop';
+                this.updateOverlay(0, this.currentLoopSteps, { __phase: 'loop', __index: 0 }).catch(() => {});
+            }
+        });
+
+        await safeExpose('control_execute_step', async (index) => {
+            const i = parseInt(index);
+            if (!this.currentLoopSteps || !this.currentLoopSteps[i]) return;
+            const ctx = { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: i, nf: this.defaultNF || '' };
+            await this.updateOverlay(i, this.currentLoopSteps, ctx);
+            await this.executeStep(JSON.parse(JSON.stringify(this.currentLoopSteps[i])), ctx);
+        });
+
+        await safeExpose('control_add_step', (payload) => {
+            if (!this.currentCoordsObject) return;
+            const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            const target = this.currentCoordsObject[section];
+            if (!Array.isArray(target)) return;
+            const step = {
+                action: payload.action || 'click',
+                description: payload.description || 'Nova ação',
+                x: payload.x != null ? parseInt(payload.x) : undefined,
+                y: payload.y != null ? parseInt(payload.y) : undefined,
+                width: payload.width != null ? parseInt(payload.width) : undefined,
+                height: payload.height != null ? parseInt(payload.height) : undefined,
+                text: payload.text || undefined,
+                key: payload.key || undefined,
+                deltaY: payload.deltaY != null ? parseInt(payload.deltaY) : undefined,
+                wait_before: 0,
+                wait_after: 500
+            };
+            target.push(step);
+            this.currentLoopSteps = target;
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            this.isPaused = true;
+            this.jumpToStep = null;
+            const idx = target.length - 1;
+            this.updateOverlay(idx, target, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: idx }).catch(() => {});
+        });
+
+        await safeExpose('control_update_step_delay', (index, ms, which) => {
+            const i = parseInt(index);
+            const val = Math.max(0, parseInt(ms) || 0);
+            if (!this.currentCoordsObject) return;
+            const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            const arr = this.currentCoordsObject[section];
+            if (!Array.isArray(arr) || i < 0 || i >= arr.length) return;
+            if (String(which) === 'before') {
+                arr[i].wait_before = val;
+            } else {
+                arr[i].wait_after = val;
+            }
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            this.currentLoopSteps = arr;
+            try { 
+                this.updateOverlay(i, arr, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: i });
+            } catch (e) {}
+            this.log(`Delay (${which || 'after'}) do passo ${i} atualizado para ${val}ms e salvo.`);
+        });
+
+        await safeExpose('control_run_flow', async () => {
+            if (!Array.isArray(this.currentLoopSteps) || this.currentLoopSteps.length === 0) return;
+            const steps = this.currentLoopSteps.slice(0, Math.min(this.stopAfterStep || 5, this.currentLoopSteps.length));
+            const ctx = { nf: this.defaultNF || '', products: [], __phase: this.currentSection === 'setup' ? 'setup' : 'loop' };
+            this.isPaused = false;
+            for (let j = 0; j < steps.length; j++) {
+                const currentStep = JSON.parse(JSON.stringify(steps[j]));
+                ctx.__index = j;
+                await this.updateOverlay(j, steps, ctx);
+                const result = await this.executeStep(currentStep, ctx);
+                if (result && result.action === 'jump') {
+                    j = result.index - 1;
+                    this.jumpToStep = null;
+                }
+            }
+            this.isPaused = true;
+            this.log(`Fluxo (painel) concluído até a ação ${steps.length}. Bot pausado.`);
+        });
+
+        await safeExpose('control_reload_coords', () => {
+            try {
+                const fresh = JSON.parse(fs.readFileSync('coordinates.json', 'utf8'));
+                this.currentCoordsObject = fresh;
+                const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+                const steps = fresh[section] || [];
+                this.currentLoopSteps = steps;
+                this.updateOverlay(0, steps, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: 0 }).catch(() => {});
+                this.log('coordinates.json recarregado no painel.');
+            } catch (e) {
+                this.log(`Erro ao recarregar coordinates.json: ${e.message}`);
+            }
+        });
+
+        await safeExpose('control_set_stop_after', (n) => {
+            this.stopAfterStep = Math.max(1, parseInt(n) || 5);
+            try { localStorage.setItem('botStopAfter', String(this.stopAfterStep)); } catch (e) {}
+            this.log(`Stop after set to ${this.stopAfterStep}`);
+        });
+
+        await safeExpose('control_set_default_nf', (nf) => {
+            this.defaultNF = String(nf || '').trim();
+            try { localStorage.setItem('botDefaultNF', this.defaultNF); } catch (e) {}
+            this.log(`Default NF set to ${this.defaultNF}`);
+        });
+
+        await safeExpose('control_reset_overlay_pos', () => {
+            try { localStorage.removeItem('botOverlayPos'); } catch (e) {}
+            this.page.evaluate(() => {
+                const overlay = document.getElementById('bot-overlay');
+                if (!overlay) return;
+                overlay.style.top = '20px';
+                overlay.style.right = '10px';
+                overlay.style.left = 'auto';
+                overlay.style.bottom = 'auto';
+            }).catch(() => {});
+        });
+
+        await safeExpose('control_toggle_overlay_lock', (lock) => {
+            this.page.evaluate((locked) => {
+                const overlay = document.getElementById('bot-overlay');
+                if (!overlay) return;
+                overlay.__dragLock = !!locked;
+                try { localStorage.setItem('botOverlayLock', locked ? '1' : '0'); } catch (e) {}
+            }, !!lock).catch(() => {});
+        });
+
+        await safeExpose('control_update_overlay_pos', (pos) => {
+            try {
+                if (pos && typeof pos.left === 'number' && typeof pos.top === 'number') {
+                    this.lastOverlayPos = { left: pos.left, top: pos.top };
+                }
+            } catch (e) {}
+        });
+
+        await safeExpose('control_go_to_url', async (url) => {
+            if (!url) return;
+            try {
+                await this.page.goto(String(url), { waitUntil: 'domcontentloaded' });
+                this.log(`Navegado para ${url}`);
+            } catch (e) {
+                this.log(`Erro ao navegar: ${e.message}`);
+            }
+        });
+
+        await safeExpose('control_open_workspace', async () => {
+            try {
+                await this.page.goto('https://workspace.sisand.com.br/arquivos', { waitUntil: 'domcontentloaded' });
+                this.log('Workspace /arquivos aberto');
+            } catch (e) {
+                this.log(`Erro ao abrir Workspace /arquivos: ${e.message}`);
+            }
+        });
+
+        await safeExpose('control_delete_step', (index) => {
+            const i = parseInt(index);
+            if (!this.currentCoordsObject) return;
+            // Resolve section robustly
+            let section = this.currentSection === 'setup' ? 'setup_steps' : (this.currentSection === 'loop' ? 'invoice_loop_steps' : null);
+            if (!section && this.lastOverlayContext && this.lastOverlayContext.__phase) {
+                section = this.lastOverlayContext.__phase === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            }
+            if (!section) section = 'invoice_loop_steps';
+            const arr = this.currentCoordsObject[section];
+            if (!Array.isArray(arr)) {
+                this.currentCoordsObject[section] = [];
+            }
+            if (!Array.isArray(this.currentCoordsObject[section])) return;
+            if (i < 0 || i >= this.currentCoordsObject[section].length) return;
+            this.isPaused = true;
+            this.jumpToStep = null;
+            this.currentCoordsObject[section].splice(i, 1);
+            this.currentLoopSteps = this.currentCoordsObject[section];
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            const nextIndex = Math.max(0, i - 1);
+            try {
+                const phase = section === 'setup_steps' ? 'setup' : 'loop';
+                this.updateOverlay(nextIndex, this.currentLoopSteps, { __phase: phase, __index: nextIndex });
+            } catch (e) {}
+            this.log(`Step ${i} deleted from ${section} and coordinates.json saved.`);
+        });
+
+        await safeExpose('control_move_step_up', (index) => {
+            const i = parseInt(index);
+            if (!this.currentCoordsObject) return;
+            const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            const arr = this.currentCoordsObject[section];
+            if (!Array.isArray(arr) || i <= 0 || i >= arr.length) return;
+            const tmp = arr[i - 1];
+            arr[i - 1] = arr[i];
+            arr[i] = tmp;
+            this.currentLoopSteps = arr;
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            try { this.updateOverlay(i - 1, arr, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: i - 1 }); } catch (e) {}
+            this.log(`Step ${i} moved up in ${section} and coordinates.json saved.`);
+        });
+
+        await safeExpose('control_move_step_down', (index) => {
+            const i = parseInt(index);
+            if (!this.currentCoordsObject) return;
+            const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            const arr = this.currentCoordsObject[section];
+            if (!Array.isArray(arr) || i < 0 || i >= arr.length - 1) return;
+            const tmp = arr[i + 1];
+            arr[i + 1] = arr[i];
+            arr[i] = tmp;
+            this.currentLoopSteps = arr;
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            try { this.updateOverlay(i + 1, arr, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: i + 1 }); } catch (e) {}
+            this.log(`Step ${i} moved down in ${section} and coordinates.json saved.`);
+        });
+
+        await safeExpose('control_rename_step', (index, description) => {
+            const i = parseInt(index);
+            const desc = String(description || '').trim();
+            if (!this.currentCoordsObject) return;
+            const section = this.currentSection === 'setup' ? 'setup_steps' : 'invoice_loop_steps';
+            const arr = this.currentCoordsObject[section];
+            if (!Array.isArray(arr) || i < 0 || i >= arr.length) return;
+            arr[i].description = desc || arr[i].description || arr[i].action || 'Ação';
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            this.currentLoopSteps = arr;
+            try { this.updateOverlay(i, arr, { __phase: this.currentSection === 'setup' ? 'setup' : 'loop', __index: i }); } catch (e) {}
+            this.log(`Step ${i} renamed to "${arr[i].description}" and saved.`);
+        });
+
+        await safeExpose('control_refresh_overlay', () => {
+            if (this.lastOverlaySteps) {
+                try {
+                    this.updateOverlay(this.lastOverlayIndex || 0, this.lastOverlaySteps, this.lastOverlayContext || {});
+                } catch (e) {}
+            }
+        });
+
         await safeExpose('control_test_click', async (x, y) => {
             await this.visualClick(parseInt(x), parseInt(y));
         });
@@ -197,6 +438,58 @@ class VisionBot {
             this.recordedActions.splice(idx, 1);
             this.updateRecordingDisplay().catch(() => {});
         });
+
+        await safeExpose('control_save_recorded_as_step', (index, description) => {
+            const idx = parseInt(index);
+            const a = this.recordedActions && this.recordedActions[idx];
+            if (!a) return;
+            const section = (this.currentLoopSteps === (this.currentCoordsObject && this.currentCoordsObject.setup_steps))
+                ? 'setup_steps'
+                : 'invoice_loop_steps';
+            const target = this.currentCoordsObject && this.currentCoordsObject[section];
+            if (!Array.isArray(target)) return;
+            let step = null;
+            if (a.kind === 'bot_step') {
+                step = {
+                    action: a.action,
+                    x: a.x, y: a.y,
+                    startX: a.startX, startY: a.startY,
+                    endX: a.endX, endY: a.endY,
+                    deltaY: a.deltaY,
+                    width: a.width, height: a.height,
+                    text: a.text,
+                    description: description || a.description || a.action,
+                    wait_before: 0, wait_after: 0
+                };
+            } else if (a.kind === 'user_event') {
+                switch (a.type) {
+                    case 'click':
+                        step = { action: 'click', x: a.x, y: a.y, description: description || 'Clique', wait_after: 500 };
+                        break;
+                    case 'double_click':
+                        step = { action: 'double_click', x: a.x, y: a.y, description: description || 'Double click', wait_after: 500 };
+                        break;
+                    case 'keypress':
+                        step = { action: 'keypress', key: a.key, description: description || `Tecla ${a.key}`, wait_after: 0 };
+                        break;
+                    case 'scroll':
+                        step = { action: 'scroll', x: a.x || 0, y: a.y || 0, deltaY: a.deltaY || 200, description: description || 'Scroll', wait_after: 0 };
+                        break;
+                    default:
+                        step = { action: 'click', x: a.x || 0, y: a.y || 0, description: description || 'Ação', wait_after: 300 };
+                        break;
+                }
+            }
+            if (!step) return;
+            target.push(step);
+            this.currentLoopSteps = target;
+            fs.writeFileSync('coordinates.json', JSON.stringify(this.currentCoordsObject, null, 2));
+            try {
+                const idxToShow = target.length - 1;
+                this.updateOverlay(idxToShow, target, { __phase: section === 'setup_steps' ? 'setup' : 'loop', __index: idxToShow });
+            } catch (e) {}
+            this.log(`Step salvo em ${section} como "${step.description}"`);
+        });
     }
 
     async init() {
@@ -206,15 +499,60 @@ class VisionBot {
         console.log('Initializing VisionBot...');
         this.browser = await chromium.launch({
             headless: false,
-            args: ['--start-maximized']
+            args: ['--start-maximized', '--disable-renderer-backgrounding']
         });
         
-        this.scaleFactor = 2; // High DPI for better OCR
+        this.scaleFactor = parseFloat(process.env.BOT_SCALE_FACTOR || '1.5');
         const context = await this.browser.newContext({
             viewport: { width: 1920, height: 1080 },
-            deviceScaleFactor: this.scaleFactor
+            deviceScaleFactor: this.scaleFactor,
+            acceptDownloads: true
         });
         this.page = await context.newPage();
+        try { if (!fs.existsSync('files')) fs.mkdirSync('files', { recursive: true }); } catch (e) {}
+        this.page.on('download', async (download) => {
+            try {
+                const name = download.suggestedFilename();
+                const outPath = path.join('files', name || `download_${Date.now()}`);
+                await download.saveAs(outPath);
+                this.log(`Download salvo em ${outPath}`);
+            } catch (e) {
+                this.log(`Erro ao salvar download: ${e.message}`);
+            }
+        });
+        try {
+            this.page.on('framenavigated', async () => {
+                try {
+                    await this.setupOverlay();
+                    if (this.lastOverlaySteps) {
+                        await this.updateOverlay(this.lastOverlayIndex || 0, this.lastOverlaySteps, this.lastOverlayContext || {});
+                    }
+                } catch (e) {}
+            });
+            context.on('page', async (p) => {
+                try {
+                    await this.setupControlFunctions(p);
+                    const prev = this.page;
+                    this.page = p;
+                    await this.setupOverlay();
+                    if (this.lastOverlaySteps) {
+                        await this.updateOverlay(this.lastOverlayIndex || 0, this.lastOverlaySteps, this.lastOverlayContext || {});
+                    }
+                    this.page = prev;
+                    p.on('framenavigated', async () => {
+                        const prev2 = this.page;
+                        this.page = p;
+                        try {
+                            await this.setupOverlay();
+                            if (this.lastOverlaySteps) {
+                                await this.updateOverlay(this.lastOverlayIndex || 0, this.lastOverlaySteps, this.lastOverlayContext || {});
+                            }
+                        } catch (e) {}
+                        this.page = prev2;
+                    });
+                } catch (e) {}
+            });
+        } catch (e) {}
         
         // --- EXPOSE CONTROL FUNCTIONS TO BROWSER ---
         await this.setupControlFunctions(this.page);
@@ -311,6 +649,7 @@ class VisionBot {
                         <div style="display:flex; gap:4px;">
                             <button data-idx="${absIdx}" class="rec-test" style="background:#17a2b8; color:#fff; border:none; padding:3px 6px; border-radius:3px; cursor:pointer;">▶ Testar</button>
                             <button data-idx="${absIdx}" class="rec-delete" style="background:#dc3545; color:#fff; border:none; padding:3px 6px; border-radius:3px; cursor:pointer;">🗑</button>
+                            <button data-idx="${absIdx}" class="rec-save-step" style="background:#28a745; color:#fff; border:none; padding:3px 6px; border-radius:3px; cursor:pointer;">💾 Salvar Step</button>
                         </div>
                     </div>`;
                 });
@@ -327,6 +666,14 @@ class VisionBot {
                     btn.addEventListener('click', (e) => {
                         const idx = parseInt(e.currentTarget.getAttribute('data-idx'));
                         if (window.control_delete_recorded_action) window.control_delete_recorded_action(idx);
+                    });
+                });
+                display.querySelectorAll('.rec-save-step').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const idx = parseInt(e.currentTarget.getAttribute('data-idx'));
+                        let name = '';
+                        try { name = prompt('Nome da ação', 'Nova ação'); } catch (err) { name = 'Nova ação'; }
+                        if (window.control_save_recorded_as_step) window.control_save_recorded_as_step(idx, name);
                     });
                 });
             }, actions);
@@ -476,8 +823,6 @@ class VisionBot {
         }
 
         const screenshotBuffer = await this.page.screenshot(screenshotOptions);
-        fs.writeFileSync('debug_ocr_capture.png', screenshotBuffer);
-
         const { data } = await this.worker.recognize(screenshotBuffer);
         
         const words = [];
@@ -653,23 +998,14 @@ class VisionBot {
         await this.delay(30);
 
         const screenshotBuffer = await this.page.screenshot({ clip: region });
-        fs.writeFileSync('debug_last_ocr_raw.png', screenshotBuffer);
+        if (process.env.BOT_SAVE_DEBUG_SHOTS === '1') {
+            try {
+                fs.writeFileSync('debug_last_ocr_raw.png', screenshotBuffer);
+            } catch (e) {}
+        }
 
         let processedBuffer = screenshotBuffer;
-        try {
-            const image = await Jimp.read(screenshotBuffer);
-            image
-                .greyscale()
-                .contrast(0.8)
-                .posterize(2)
-                .normalize();
-            
-            processedBuffer = await image.getBuffer('image/png');
-            fs.writeFileSync('debug_last_ocr_processed.png', processedBuffer);
-            this.log(`[getWordsInRegion] Image preprocessed (Greyscale+HighContrast+B/W)`);
-        } catch (e) {
-            this.log(`[getWordsInRegion] Preprocessing failed: ${e.message}. Using raw image.`);
-        }
+        processedBuffer = screenshotBuffer;
 
         const { data } = await this.worker.recognize(processedBuffer);
 
@@ -1695,10 +2031,6 @@ class VisionBot {
         await this.page.keyboard.press('Home');
         await this.delay(2000); // Wait for scroll animation
 
-        // Capture screenshot of the list to debug buttons/layout
-        await this.page.screenshot({ path: 'debug_list_screen.png' });
-        this.log("Saved debug_list_screen.png");
-
         // 2. Detect Rows to find valid Y coordinates
         let currentVisualY = 280; // Default fallback
         const detectedRows = await this.detectInvoiceRows();
@@ -1869,15 +2201,51 @@ class VisionBot {
         return true; // Simplificado para exemplo
     }
 
+    async runWorkspaceOnly() {
+        try {
+            await this.init();
+            await this.log("Navigating to Workspace arquivos (download mode)...");
+            await this.page.goto('https://workspace.sisand.com.br/arquivos', { waitUntil: 'domcontentloaded' });
+            await this.setupOverlay();
+            try { this.stopAfterStep = parseInt((await this.page.evaluate(() => localStorage.getItem('botStopAfter'))) || '5', 10); } catch (e) { this.stopAfterStep = 5; }
+            try { this.defaultNF = await this.page.evaluate(() => localStorage.getItem('botDefaultNF') || ''); } catch (e) { this.defaultNF = ''; }
+            try {
+                const coords = JSON.parse(fs.readFileSync('coordinates.json', 'utf8'));
+                this.currentCoordsObject = coords;
+                const section = coords.invoice_loop_steps || coords.setup_steps || [];
+                const steps = Array.isArray(section) ? section : [];
+                if (steps.length > 0) {
+                    this.currentLoopSteps = steps;
+                    this.currentSection = 'loop';
+                    await this.updateOverlay(0, steps, { __phase: 'loop', __index: 0 });
+                }
+            } catch (e) {
+                this.log(`Erro ao carregar coordinates.json no modo Workspace: ${e.message}`);
+            }
+            this.isPaused = true;
+            this.log("Workspace download mode pronto. Use o painel para configurar o clique em 'Baixar arquivo'.");
+        } catch (error) {
+            this.log(`Error during workspace-only mode: ${error.message}`);
+            if (this.page) {
+                try { await this.page.screenshot({ path: 'error_workspace_mode.png' }); } catch (e) {}
+            }
+        } finally {
+            if (this.worker) {
+                await this.worker.terminate();
+            }
+        }
+    }
+
     async setupOverlay() {
         await this.page.evaluate(() => {
             // Main Panel
             const overlay = document.createElement('div');
             overlay.id = 'bot-overlay';
             overlay.style.position = 'fixed';
-            overlay.style.bottom = '20px';
+            overlay.style.top = '20px';
             overlay.style.right = '10px';
-            overlay.style.width = '350px';
+            overlay.style.left = 'auto';
+            overlay.style.width = '400px';
             overlay.style.maxHeight = '80vh';
             overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
             overlay.style.color = 'white';
@@ -1890,6 +2258,18 @@ class VisionBot {
             overlay.style.boxShadow = '0 4px 20px rgba(0,0,0,0.7)';
             overlay.style.border = '1px solid #444';
             document.body.appendChild(overlay);
+            try {
+                const saved = localStorage.getItem('botOverlayPos');
+                if (saved) {
+                    const p = JSON.parse(saved);
+                    if (typeof p.left === 'number' && typeof p.top === 'number') {
+                        overlay.style.left = p.left + 'px';
+                        overlay.style.top = p.top + 'px';
+                        overlay.style.right = 'auto';
+                        overlay.style.bottom = 'auto';
+                    }
+                }
+            } catch (e) {}
 
             // Toast Notification (Large Center Text)
             const toast = document.createElement('div');
@@ -2051,6 +2431,9 @@ class VisionBot {
 
     async updateOverlay(currentIndex, steps, context = {}) {
         try {
+            this.lastOverlayIndex = currentIndex;
+            this.lastOverlaySteps = steps;
+            this.lastOverlayContext = context;
             // Always clear drag highlight when moving to a new step
             await this.clearDragHighlight();
 
@@ -2073,7 +2456,7 @@ class VisionBot {
             const currentWidth = currentStep && typeof currentStep.width === 'number' ? currentStep.width : 0;
             const currentHeight = currentStep && typeof currentStep.height === 'number' ? currentStep.height : 0;
 
-            await this.page.evaluate(({ currentIndex, steps, formattedCurrentDesc, currentX, currentY, currentWidth, currentHeight, isPaused, isLast, isRecording }) => {
+            await this.page.evaluate(({ currentIndex, steps, formattedCurrentDesc, currentX, currentY, currentWidth, currentHeight, isPaused, isLast, isRecording, overlayPos }) => {
                 const overlay = document.getElementById('bot-overlay');
                 if (overlay) {
                     overlay.style.pointerEvents = 'auto';
@@ -2095,13 +2478,37 @@ class VisionBot {
                     // --- HEADER & CONTROLS ---
                     let html = `
                         <div style="border-bottom:1px solid #555; padding-bottom:10px; margin-bottom:10px;">
-                            <h3 style="margin:0 0 10px 0; font-size:16px; color:#fff; text-align:center;">🤖 Bot Action Panel</h3>
+                            <h3 id="bot-overlay-handle" style="margin:0 0 10px 0; font-size:16px; color:#fff; text-align:center; cursor:move; display:flex; align-items:center; justify-content:space-between;">
+                                <span style="margin-left:8px;">🤖 Bot Action Panel</span>
+                                <span style="display:flex; gap:6px; margin-right:8px;">
+                                    <button id="btn-reset-pos" style="background:#6c757d; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:11px;">Reset</button>
+                                    <button id="btn-lock" style="background:#6c757d; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:11px;">Lock</button>
+                                </span>
+                            </h3>
                             
                             <!-- MAIN CONTROLS -->
                             <div style="display:flex; justify-content:center; gap:5px; margin-bottom:10px;">
                                 <button id="btn-pause" onclick="window.control_pause(); window.togglePauseUI(true);" style="background:#ffc107; color:#000; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; display:${isPaused ? 'none' : 'block'}; width:80px; font-weight:bold;">⏸ Pause</button>
                                 <button id="btn-resume" onclick="window.control_resume(); window.togglePauseUI(false);" style="background:#28a745; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; display:${isPaused ? 'block' : 'none'}; width:80px; font-weight:bold;">▶ Resume</button>
                                 <button onclick="window.control_jump_step(${currentIndex})" style="background:#17a2b8; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">↻ Replay Step</button>
+                            </div>
+                            <div style="display:flex; justify-content:center; gap:6px; margin-bottom:10px;">
+                                <button id="btn-prev" style="background:#343a40; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">⬅ Prev</button>
+                                <button id="btn-next" style="background:#343a40; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Next ➡</button>
+                                <button id="btn-run-current" style="background:#007bff; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Run Current</button>
+                            </div>
+                            <div style="display:flex; justify-content:center; gap:6px; margin-bottom:10px;">
+                                <button id="btn-section-setup" style="background:#6c757d; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Setup</button>
+                                <button id="btn-section-loop" style="background:#6c757d; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Loop</button>
+                                <input id="inp-stop-after" type="number" min="1" value="5" style="width:60px; padding:4px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;" title="Stop after step">
+                                <input id="inp-default-nf" type="text" placeholder="NF" style="width:100px; padding:4px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;" title="Default NF">
+                                <button id="btn-run-flow" style="background:#28a745; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Executar Fluxo</button>
+                                <button id="btn-reload-json" style="background:#6c757d; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Reload JSON</button>
+                            </div>
+                            <div style="display:flex; justify-content:center; gap:6px; margin-bottom:10px;">
+                                <button id="btn-open-workspace" style="background:#17a2b8; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Abrir Workspace</button>
+                                <input id="inp-url" type="text" placeholder="https://..." style="flex:1; padding:4px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;" title="URL">
+                                <button id="btn-go-url" style="background:#17a2b8; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Ir</button>
                             </div>
 
                             <!-- COORDS EDITOR -->
@@ -2123,6 +2530,17 @@ class VisionBot {
                                     <button onclick="window.control_test_click(document.getElementById('inp-x').value, document.getElementById('inp-y').value)" style="flex:1; background:#6c757d; color:#fff; border:none; padding:4px; border-radius:4px; cursor:pointer; font-size:11px;">Target 🎯</button>
                                     <button onclick="window.control_update_step(${currentIndex}, document.getElementById('inp-x').value, document.getElementById('inp-y').value, document.getElementById('inp-w').value, document.getElementById('inp-h').value)" style="flex:1; background:#007bff; color:#fff; border:none; padding:4px; border-radius:4px; cursor:pointer; font-size:11px;">Update</button>
                                     <button onclick="window.control_save_coords()" style="flex:1; background:#dc3545; color:#fff; border:none; padding:4px; border-radius:4px; cursor:pointer; font-size:11px;">Save JSON 💾</button>
+                                </div>
+                                <div style="display:flex; align-items:center; gap:6px; margin-top:6px;">
+                                    <label style="width:60px;">Delay:</label>
+                                    <input id="inp-delay" type="number" value="${
+                                        (typeof steps[currentIndex].wait_after === 'number' ? steps[currentIndex].wait_after : (typeof steps[currentIndex].wait_before === 'number' ? steps[currentIndex].wait_before : 0))
+                                    }" style="width:80px; padding:4px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;">
+                                    <select id="sel-delay-which" style="padding:4px; background:#333; color:#fff; border:1px solid #555; border-radius:4px;">
+                                        <option value="after" ${ (typeof steps[currentIndex].wait_after === 'number') ? 'selected' : '' }>Após</option>
+                                        <option value="before" ${ (typeof steps[currentIndex].wait_after !== 'number' && typeof steps[currentIndex].wait_before === 'number') ? 'selected' : '' }>Antes</option>
+                                    </select>
+                                    <button id="btn-delay-save" style="background:#28a745; color:#fff; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:11px;">Salvar Delay</button>
                                 </div>
                                 ${isLast ? `<div style="margin-top:6px; display:flex; justify-content:space-between; align-items:center;">
                                     <button id="btn-record-action" style="background:${isRecording ? '#dc3545' : '#17a2b8'}; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; font-size:11px; font-weight:bold;">
@@ -2161,16 +2579,107 @@ class VisionBot {
 
                         let desc = steps[i].description;
                         if (isCurrent) desc = formattedCurrentDesc;
+                        const requiresCoords = ['click','double_click','click_and_clear','drag'].includes(steps[i].action);
+                        const hasCoords = typeof steps[i].x === 'number' && typeof steps[i].y === 'number';
+                        const isInvalid = requiresCoords && !hasCoords;
+                        const actionName = steps[i].action || '';
+                        const delayMs = (typeof steps[i].wait_after === 'number' ? steps[i].wait_after : (typeof steps[i].wait_before === 'number' ? steps[i].wait_before : null));
+                        const showDelayFor = ['click','double_click','click_and_clear','type'];
+                        let delayBadge = '';
+                        if (delayMs != null && showDelayFor.includes(actionName)) {
+                            delayBadge = ` <span style="color:#ccc;">⏱ ${delayMs}ms</span>`;
+                        }
+                        if (isInvalid) {
+                            style += ' border:1px solid #b00020;';
+                            desc = (desc || steps[i].action) + ' (incompleto)' + delayBadge;
+                        } else {
+                            desc = (desc || steps[i].action) + delayBadge;
+                        }
 
                         html += `<div id="step-${i}" style="${style}" ${onClick} title="Click to Execute/Replay">
                             <span style="display:inline-block; width:20px; text-align:center;">${icon}</span>
                             ${desc}
+                            <span style="float:right; display:flex; gap:6px;">
+                                <button class="btn-rename" data-index="${i}" style="background:#666; color:#fff; border:none; padding:2px 6px; border-radius:3px; font-size:11px;">✎</button>
+                                <button onclick="event.stopPropagation(); window.control_move_step_up(${i}); window.control_refresh_overlay();" style="background:#555; color:#fff; border:none; padding:2px 6px; border-radius:3px; font-size:11px;">↑</button>
+                                <button onclick="event.stopPropagation(); window.control_move_step_down(${i}); window.control_refresh_overlay();" style="background:#555; color:#fff; border:none; padding:2px 6px; border-radius:3px; font-size:11px;">↓</button>
+                                <button onclick="event.stopPropagation(); window.control_delete_step(${i}); window.control_refresh_overlay();" style="background:#b00020; color:#fff; border:none; padding:2px 6px; border-radius:3px; font-size:11px;">✖</button>
+                            </span>
                         </div>`;
                     }
                     html += '</div>';
 
                     // Scroll to current
                     overlay.innerHTML = html;
+                    try {
+                        const saved = localStorage.getItem('botOverlayPos');
+                        if (saved) {
+                            const p = JSON.parse(saved);
+                            if (typeof p.left === 'number' && typeof p.top === 'number') {
+                                overlay.style.left = p.left + 'px';
+                                overlay.style.top = p.top + 'px';
+                                overlay.style.right = 'auto';
+                                overlay.style.bottom = 'auto';
+                            }
+                        }
+                    } catch (e) {}
+                    if ((!overlay.style.left || !overlay.style.top) && overlayPos && typeof overlayPos.left === 'number' && typeof overlayPos.top === 'number') {
+                        overlay.style.left = overlayPos.left + 'px';
+                        overlay.style.top = overlayPos.top + 'px';
+                        overlay.style.right = 'auto';
+                        overlay.style.bottom = 'auto';
+                    }
+                    try {
+                        const lock = localStorage.getItem('botOverlayLock');
+                        overlay.__dragLock = lock === '1';
+                        const lockBtn = document.getElementById('btn-lock');
+                        if (lockBtn) lockBtn.textContent = overlay.__dragLock ? 'Unlock' : 'Lock';
+                    } catch (e) {}
+                    const handle = document.getElementById('bot-overlay-handle');
+                    if (handle && !overlay.__dragInit) {
+                        overlay.__dragInit = true;
+                        let dragging = false;
+                        let offX = 0, offY = 0;
+                        const onDown = (e) => {
+                            if (overlay.__dragLock) return;
+                            dragging = true;
+                            const r = overlay.getBoundingClientRect();
+                            offX = e.clientX - r.left;
+                            offY = e.clientY - r.top;
+                            overlay.style.left = r.left + 'px';
+                            overlay.style.top = r.top + 'px';
+                            overlay.style.right = 'auto';
+                            overlay.style.bottom = 'auto';
+                            document.addEventListener('mousemove', onMove, true);
+                            document.addEventListener('mouseup', onUp, true);
+                        };
+                        const onMove = (e) => {
+                            if (!dragging) return;
+                            const maxLeft = Math.max(0, window.innerWidth - overlay.offsetWidth - 4);
+                            const maxTop = Math.max(0, window.innerHeight - overlay.offsetHeight - 4);
+                            let newLeft = e.clientX - offX;
+                            let newTop = e.clientY - offY;
+                            if (newLeft < 0) newLeft = 0;
+                            if (newTop < 0) newTop = 0;
+                            if (newLeft > maxLeft) newLeft = maxLeft;
+                            if (newTop > maxTop) newTop = maxTop;
+                            overlay.style.left = newLeft + 'px';
+                            overlay.style.top = newTop + 'px';
+                        };
+                        const onUp = () => {
+                            dragging = false;
+                            document.removeEventListener('mousemove', onMove, true);
+                            document.removeEventListener('mouseup', onUp, true);
+                            try {
+                                const r = overlay.getBoundingClientRect();
+                                localStorage.setItem('botOverlayPos', JSON.stringify({ left: r.left, top: r.top }));
+                                if (window.control_update_overlay_pos) {
+                                    window.control_update_overlay_pos({ left: r.left, top: r.top });
+                                }
+                            } catch (e) {}
+                        };
+                        handle.addEventListener('mousedown', onDown, true);
+                    }
                     
                     // Attach input handlers to keep typing smooth and stop event propagation
                     setTimeout(() => {
@@ -2180,7 +2689,60 @@ class VisionBot {
                         const hEl = document.getElementById('inp-h');
                         const btnInline = document.getElementById('btn-inline-save');
                         const btnRecord = document.getElementById('btn-record-action');
+                        const inpDelay = document.getElementById('inp-delay');
+                        const selDelayWhich = document.getElementById('sel-delay-which');
+                        const btnDelaySave = document.getElementById('btn-delay-save');
+                        const btnReset = document.getElementById('btn-reset-pos');
+                        const btnLock = document.getElementById('btn-lock');
+                        const btnPrev = document.getElementById('btn-prev');
+                        const btnNext = document.getElementById('btn-next');
+                        const btnRunCurrent = document.getElementById('btn-run-current');
+                        const btnSetup = document.getElementById('btn-section-setup');
+                        const btnLoop = document.getElementById('btn-section-loop');
+                        const inpStopAfter = document.getElementById('inp-stop-after');
+                        const inpDefaultNF = document.getElementById('inp-default-nf');
                         const stop = (e) => e.stopPropagation();
+                        if (btnDelaySave && inpDelay && selDelayWhich) {
+                            btnDelaySave.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                const val = parseInt(inpDelay.value || '0', 10);
+                                const which = selDelayWhich.value || 'after';
+                                if (window.control_update_step_delay) window.control_update_step_delay(currentIndex, val, which);
+                            });
+                        }
+                        if (btnReset) btnReset.addEventListener('click', () => { if (window.control_reset_overlay_pos) window.control_reset_overlay_pos(); });
+                        if (btnLock) btnLock.addEventListener('click', () => { 
+                            const overlayEl = document.getElementById('bot-overlay');
+                            const newLock = !(overlayEl && overlayEl.__dragLock);
+                            if (window.control_toggle_overlay_lock) window.control_toggle_overlay_lock(newLock);
+                            const lockBtn = document.getElementById('btn-lock');
+                            if (lockBtn) lockBtn.textContent = newLock ? 'Unlock' : 'Lock';
+                        });
+                        if (btnPrev) btnPrev.addEventListener('click', () => { if (window.control_execute_step) window.control_execute_step(Math.max(0, currentIndex - 1)); });
+                        if (btnNext) btnNext.addEventListener('click', () => { if (window.control_execute_step) window.control_execute_step(Math.min(steps.length - 1, currentIndex + 1)); });
+                        if (btnRunCurrent) btnRunCurrent.addEventListener('click', () => { if (window.control_execute_step) window.control_execute_step(currentIndex); });
+                        if (btnSetup) btnSetup.addEventListener('click', () => { if (window.control_select_section) window.control_select_section('setup'); });
+                        if (btnLoop) btnLoop.addEventListener('click', () => { if (window.control_select_section) window.control_select_section('loop'); });
+                        const btnRunFlow = document.getElementById('btn-run-flow');
+                        const btnReloadJson = document.getElementById('btn-reload-json');
+                        if (btnRunFlow) btnRunFlow.addEventListener('click', () => { if (window.control_run_flow) window.control_run_flow(); });
+                        if (btnReloadJson) btnReloadJson.addEventListener('click', () => { if (window.control_reload_coords) window.control_reload_coords(); });
+                        const btnOpenWorkspace = document.getElementById('btn-open-workspace');
+                        const btnGoUrl = document.getElementById('btn-go-url');
+                        const inpUrl = document.getElementById('inp-url');
+                        if (btnOpenWorkspace) btnOpenWorkspace.addEventListener('click', () => { if (window.control_open_workspace) window.control_open_workspace(); });
+                        if (btnGoUrl) btnGoUrl.addEventListener('click', () => { 
+                            const u = inpUrl ? inpUrl.value : '';
+                            if (window.control_go_to_url && u) window.control_go_to_url(u);
+                        });
+                        if (inpStopAfter) {
+                            try { const v = localStorage.getItem('botStopAfter'); if (v) inpStopAfter.value = v; } catch (e) {}
+                            inpStopAfter.addEventListener('change', () => { if (window.control_set_stop_after) window.control_set_stop_after(inpStopAfter.value); });
+                        }
+                        if (inpDefaultNF) {
+                            try { const v = localStorage.getItem('botDefaultNF'); if (v) inpDefaultNF.value = v; } catch (e) {}
+                            inpDefaultNF.addEventListener('change', () => { if (window.control_set_default_nf) window.control_set_default_nf(inpDefaultNF.value); });
+                        }
                         [xEl, yEl, wEl, hEl].forEach(el => {
                             if (!el) return;
                             ['keydown','keyup','keypress','wheel'].forEach(ev => el.addEventListener(ev, stop));
@@ -2232,6 +2794,19 @@ class VisionBot {
                                 }
                             });
                         }
+
+                        Array.from(document.querySelectorAll('.btn-rename')).forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                const idx = parseInt(btn.getAttribute('data-index'), 10);
+                                const def = (steps[idx] && (steps[idx].description || steps[idx].action || 'Ação')) || 'Ação';
+                                const nd = prompt('Novo nome', def);
+                                if (nd != null && window.control_rename_step) {
+                                    window.control_rename_step(idx, nd);
+                                    if (window.control_refresh_overlay) window.control_refresh_overlay();
+                                }
+                            });
+                        });
 
                         if (!window.botRecordingInitialized) {
                             window.botRecordingInitialized = true;
@@ -2310,7 +2885,8 @@ class VisionBot {
                 currentY: currentStep.y,
                 isPaused: this.isPaused,
                 isLast: currentIndex === (steps.length - 1),
-                isRecording: this.isRecording
+                isRecording: this.isRecording,
+                overlayPos: this.lastOverlayPos || null
             });
         } catch (e) {
             // Ignore overlay errors (page might be navigating)
@@ -2362,11 +2938,19 @@ class VisionBot {
                     break;
 
                 case 'double_click':
+                    if (typeof step.x !== 'number' || typeof step.y !== 'number') {
+                        this.log('⚠ Step inválido: double_click requer X/Y.');
+                        break;
+                    }
                     this.log(`Double Clicking at (${step.x}, ${step.y})...`);
                     await this.visualClick(step.x, step.y, { doubleClick: true });
                     break;
                     
                 case 'click_and_clear':
+                    if (typeof step.x !== 'number' || typeof step.y !== 'number') {
+                        this.log('⚠ Step inválido: click_and_clear requer X/Y.');
+                        break;
+                    }
                     this.log(`Click and clear at (${step.x}, ${step.y})...`);
                     await this.visualClick(step.x, step.y, { doubleClick: true });
                     await this.delay(200);
@@ -2393,7 +2977,7 @@ class VisionBot {
                     }
                     this.log(`Typing: "${textToType}"`);
                     if (textToType) {
-                        if (step.x && step.y) {
+                        if (typeof step.x === 'number' && typeof step.y === 'number') {
                             await this.visualClick(step.x, step.y, { doubleClick: true });
                             await this.delay(200);
                         }
@@ -2528,19 +3112,23 @@ class VisionBot {
                     break;
 
                 case 'extract_access_key':
-                    this.log("Capturando chave de acesso via Ctrl+C da tela da NF...");
+                    this.log("Capturando chave de acesso vinculada à NF...");
                     try {
                         await clipboardy.write('');
-                        await this.page.keyboard.press('Control+C');
-                        await this.delay(300);
-
-                        const raw = await clipboardy.read();
+                        await this.page.keyboard.down('Control');
+                        await this.page.keyboard.press('KeyA');
+                        await this.page.keyboard.up('Control');
+                        await this.delay(120);
+                        await this.page.keyboard.down('Control');
+                        await this.page.keyboard.press('KeyC');
+                        await this.page.keyboard.up('Control');
+                        await this.delay(250);
+                        let raw = '';
+                        try { raw = await clipboardy.read(); } catch {}
                         const logName = `prints/clipboard_access_key_${context.nf || 'unknown'}.txt`;
-                        fs.writeFileSync(logName, raw);
-
-                        const digits = raw.replace(/\D/g, '');
+                        try { fs.writeFileSync(logName, raw); } catch {}
+                        let digits = (raw || '').replace(/\D/g, '');
                         const matches = digits.match(/\d{44}/g) || [];
-
                         const isValidNFeKey = (key) => {
                             if (!/^\d{44}$/.test(key)) return false;
                             let sum = 0;
@@ -2554,7 +3142,6 @@ class VisionBot {
                             const dv = dvCalc === 0 || dvCalc === 1 ? 0 : dvCalc;
                             return dv === parseInt(key[43], 10);
                         };
-
                         let candidate = "";
                         for (const m of matches) {
                             if (isValidNFeKey(m)) {
@@ -2562,14 +3149,32 @@ class VisionBot {
                                 break;
                             }
                         }
-
                         if (!candidate && digits.length === 44 && isValidNFeKey(digits)) {
                             candidate = digits;
                         }
-
+                        if (!candidate) {
+                            const reg = { x: 0, y: 50, width: 1920, height: 400 };
+                            const words = await this.getWordsInRegion(reg, '6');
+                            const joined = words.map(w => w.text.replace(/\D/g, '')).join('');
+                            const found = joined.match(/\d{44}/g) || [];
+                            for (const k of found) {
+                                if (isValidNFeKey(k)) { candidate = k; break; }
+                            }
+                            if (!candidate) {
+                                const plain = (await this.getTextInRegion(reg, '6')).replace(/\D/g, '');
+                                const f2 = plain.match(/\d{44}/g) || [];
+                                for (const k of f2) {
+                                    if (isValidNFeKey(k)) { candidate = k; break; }
+                                }
+                            }
+                        }
                         if (candidate) {
                             context.accessKey = candidate;
                             this.log(`✓ Access Key Captured from clipboard: ${candidate}`);
+                            if (!context.nf || String(context.nf).toLowerCase() === 'unknown') {
+                                const sliced = candidate.substring(25, 34);
+                                if (/^\d+$/.test(sliced)) context.nf = String(parseInt(sliced, 10));
+                            }
                         } else {
                             this.log(`⚠ Conteúdo do clipboard não contém chave NF-e válida. Digits length=${digits.length}.`);
                         }
@@ -2613,6 +3218,7 @@ class VisionBot {
                     const record = {
                         numeroNF: context.nf,
                         chaveAcesso: context.accessKey,
+                        "chave-acesso": context.accessKey,
                         itens: itensToSave.map(i => ({
                             codFabricante: i.codFabricante,
                             produto: i.produto,
@@ -2740,6 +3346,8 @@ class VisionBot {
 
             // Setup Overlay
             await this.setupOverlay();
+            try { this.stopAfterStep = parseInt((await this.page.evaluate(() => localStorage.getItem('botStopAfter'))) || '5', 10); } catch (e) { this.stopAfterStep = 5; }
+            try { this.defaultNF = await this.page.evaluate(() => localStorage.getItem('botDefaultNF') || ''); } catch (e) { this.defaultNF = ''; }
 
             // Executa sequência de cliques do coordinates.json
             const coords = JSON.parse(fs.readFileSync('coordinates.json', 'utf8'));
@@ -2749,6 +3357,7 @@ class VisionBot {
             if (coords.setup_steps) {
                 this.log("Executing Setup Steps...");
                 this.currentLoopSteps = coords.setup_steps; // Set current context
+                this.currentSection = 'setup';
                 
                 for (let i = 0; i < coords.setup_steps.length; i++) {
                     const step = coords.setup_steps[i];
@@ -2768,38 +3377,25 @@ class VisionBot {
 
             // 2. Single-run of invoice_loop_steps (NO LOOPING)
             const loopSteps = coords.invoice_loop_steps || [];
+            const effectiveSteps = Array.isArray(loopSteps) ? loopSteps.slice(0, Math.min(this.stopAfterStep || 5, loopSteps.length)) : [];
+            this.currentSection = 'loop';
             if (!coords.setup_steps && Array.isArray(coords)) {
                 const coordsArray = coords;
                 for (let i = 0; i < coordsArray.length; i++) {
                     await this.updateOverlay(i, coordsArray);
                     await this.executeStep(coordsArray[i]);
                 }
-            } else if (loopSteps.length > 0) {
+            } else if (effectiveSteps.length > 0) {
                 let invoiceList = [];
-                try {
-                    if (fs.existsSync('prints/final_invoice_list.txt')) {
-                        const rawList = fs.readFileSync('prints/final_invoice_list.txt', 'utf8');
-                        const lines = rawList.split('\n');
-                        for (const line of lines) {
-                            const trimmed = line.trim();
-                            if (!trimmed) continue;
-                            const parts = trimmed.split('→');
-                            const nf = (parts[1] || parts[0]).trim();
-                            if (nf) invoiceList.push(nf);
-                        }
-                    }
-                } catch (e) {
-                    this.log(`Erro ao ler lista de NFs: ${e.message}`);
-                }
 
                 if (invoiceList.length === 0) {
-                    const context = { nf: '', products: [], __phase: 'loop' };
-                    this.currentLoopSteps = loopSteps;
+                    const context = { nf: this.defaultNF || '', products: [], __phase: 'loop' };
+                    this.currentLoopSteps = effectiveSteps;
                     try {
-                        for (let j = 0; j < loopSteps.length; j++) {
-                            const currentStep = JSON.parse(JSON.stringify(loopSteps[j]));
+                        for (let j = 0; j < effectiveSteps.length; j++) {
+                            const currentStep = JSON.parse(JSON.stringify(effectiveSteps[j]));
                             context.__index = j;
-                            await this.updateOverlay(j, loopSteps, context);
+                            await this.updateOverlay(j, effectiveSteps, context);
                             const result = await this.executeStep(currentStep, context);
                             if (result && result.action === 'jump') {
                                 this.log(`Jumping to step ${result.index}`);
@@ -2808,21 +3404,21 @@ class VisionBot {
                             }
                         }
                         this.isPaused = true;
-                        this.log("Fluxo único concluído. Aguardando ação para gravar.");
+                        this.log(`Fluxo concluído até a ação ${effectiveSteps.length}. Bot pausado.`);
                     } catch(e) {
                         this.log(`Erro durante execução única: ${e.message}`);
                     }
                 } else {
-                    this.currentLoopSteps = loopSteps;
+                    this.currentLoopSteps = effectiveSteps;
                     for (let idx = 0; idx < invoiceList.length; idx++) {
                         const nfNumber = invoiceList[idx];
                         const context = { nf: nfNumber, products: [], __phase: 'loop' };
                         this.log(`Iniciando fluxo da NF ${nfNumber} (${idx + 1}/${invoiceList.length})`);
                         try {
-                            for (let j = 0; j < loopSteps.length; j++) {
-                                const currentStep = JSON.parse(JSON.stringify(loopSteps[j]));
+                            for (let j = 0; j < effectiveSteps.length; j++) {
+                                const currentStep = JSON.parse(JSON.stringify(effectiveSteps[j]));
                                 context.__index = j;
-                                await this.updateOverlay(j, loopSteps, context);
+                                await this.updateOverlay(j, effectiveSteps, context);
                                 const result = await this.executeStep(currentStep, context);
                                 if (result && result.action === 'jump') {
                                     this.log(`Jumping to step ${result.index}`);
@@ -2830,12 +3426,14 @@ class VisionBot {
                                     this.jumpToStep = null;
                                 }
                             }
+                            this.isPaused = true;
+                            this.log(`Fluxo concluído até a ação ${effectiveSteps.length}. Bot pausado.`);
+                            break;
                         } catch (e) {
                             this.log(`Erro durante execução da NF ${nfNumber}: ${e.message}`);
                         }
                     }
-                    this.isPaused = true;
-                    this.log("Loop de NFs concluído. Aguardando ação para gravar.");
+                    // Already paused after first NF
                 }
             }
 
@@ -2855,5 +3453,9 @@ class VisionBot {
     }
 }
 
-// Execute
-(new VisionBot()).run();
+const mode = process.env.BOT_MODE || process.argv[2] || '';
+if (mode === 'workspace' || mode === 'workspace_download') {
+    (new VisionBot()).runWorkspaceOnly();
+} else {
+    (new VisionBot()).run();
+}

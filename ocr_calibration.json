@@ -1,0 +1,22 @@
+{
+  "columns": {
+    "codFabricante": {
+      "xPct": 0.02,
+      "wPct": 0.17
+    },
+    "produto": {
+      "xPct": 0.195,
+      "wPct": 0.53
+    },
+    "localizacao": {
+      "xPct": 0.73,
+      "wPct": 0.12
+    },
+    "qtd": {
+      "xPct": 0.86,
+      "wPct": 0.05
+    }
+  },
+  "headerBandPx": 28,
+  "minRowHeightPx": 18
+}
